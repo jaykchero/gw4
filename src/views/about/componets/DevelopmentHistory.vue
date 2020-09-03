@@ -190,7 +190,7 @@ body{
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
-  
+
   margin: 0 auto;
 }
 

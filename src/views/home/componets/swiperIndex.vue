@@ -146,7 +146,7 @@
     .swiper-pagination{
 
         position: absolute;
-        top: 650px;
+        top: 850px;
         z-index: 999;
     }
 
