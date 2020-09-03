@@ -37,6 +37,7 @@
 <script>
   import Swiper from "swiper"
    import * as swiperAni from '../../../assets/js/animate.js' //根据自己的路径进行引入
+  import $ from 'jquery'
 
 
   export default {
@@ -48,12 +49,29 @@
     date () {
       return {
         left:{},
+        screenWidth:'',
+        screenHeight:'',
       }
     },
 
-
     mounted() {
-      console.log(this.img1)
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+        console.log(this.screenHeight)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.swiper-pagination').css("top","950px");
+        console.log("css",$('.swiper-pagination').css("top"))
+
+      }
+
       this.left = Array.from(document.getElementsByClassName('banner-swiper'))
       document.addEventListener('scroll', this.handleScroll4)
       var swiper = new Swiper('.banner-swiper',{
@@ -128,22 +146,22 @@
     .swiper-pagination{
 
         position: absolute;
-        top: 620px !important;
+        top: 650px;
         z-index: 999;
     }
 
     .slide-one {
-      height: 700px !important;
+      height: 1080px !important;
       background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner1.png) no-repeat center;
       background-size: cover;
     }
     .slide-two {
-       height: 700px !important;
+       height: 1080px !important;
       background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner2.png) no-repeat center;
       background-size: cover;
     }
     .slide-three {
-       height: 700px !important;
+       height: 1080px !important;
       background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner3.png) no-repeat center;
       background-size: cover;
     }

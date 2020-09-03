@@ -101,7 +101,11 @@ export default {
       }
     };
   },
-  created() {},
+  created() {
+
+
+
+  },
   // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
   computed: {
     swiper() {
@@ -113,6 +117,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+  .slide-one{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   .p{
     font-size: 16px;
     line-height: 20px !important;

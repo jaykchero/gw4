@@ -160,8 +160,8 @@
 
 
   .h-b img {
-    width: 1519px;
-     height: 388px;
+    width: 100%;
+    height: 100%;
   }
   .h-b{
     margin-bottom: -50px;

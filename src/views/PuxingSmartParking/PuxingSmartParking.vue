@@ -88,10 +88,10 @@
     text-align: center;
   }
 
-  .h-b img {
-    width: 1519px;
-     height: 388px;
-  }
+    .h-b img {
+      width: 100%;
+      height: 100%;
+    }
   .h-b{
     margin-bottom: 70px;
     width: 100%;
