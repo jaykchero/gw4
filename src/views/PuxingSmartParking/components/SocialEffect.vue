@@ -36,6 +36,8 @@
 </template>
 
 <script>
+    import $ from "jquery";
+
     export default {
         name: "SocialEffect",
       data () {
@@ -46,11 +48,23 @@
       },
       mounted() {
 
+        this.screenWidth = document.body.clientWidth;
+        this.screenHeight = document.body.clientHeight;
+        window.onresize = () => {
+          return (() => {
+            this.screenWidth = document.body.clientWidth;
+            this.screenHeight = document.body.clientHeight;
+          })();
+        };
+        console.log(this.screenHeight,this.screenWidth)
+        if(this.screenWidth>1600||this.screenHeight>900){
+          $('.clearfix').css("width","1600px");
+           $('.clearfix li').css("margin-left","120px");
+        }
+
 
         this.fadeInElements = Array.from(document.getElementsByClassName('left1'))
         this.fadeInElements1 = Array.from(document.getElementsByClassName('right'))
-
-
 
         // 监听鼠标滚动事件
         document.addEventListener('scroll', this.handleScroll)
@@ -146,7 +160,7 @@
   ul {
     width: 1200px;
 
-    margin: 50px auto;
+    margin: 0 auto;
   }
 
   ul li {

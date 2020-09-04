@@ -32,6 +32,8 @@
 </template>
 
 <script>
+  import $ from "jquery";
+
   export default {
     name: "SocialEffect",
     data() {
@@ -44,11 +46,22 @@
     },
     mounted() {
 
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+      console.log(this.screenHeight,this.screenWidth)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.tl2').css({"font-size":"30px","line-height":"25px"});
+        // $('.h3').css("line-height","30px!important");
+      }
 
       this.fadeInElements = Array.from(document.getElementsByClassName('tl11'))
       this.fadeInElements1 = Array.from(document.getElementsByClassName('tl2'))
-
-
 
       // 监听鼠标滚动事件
       document.addEventListener('scroll', this.handleScroll)
@@ -99,6 +112,7 @@
 
 <style scoped>
 
+
   p{
     font-size:15px;
     line-height: 20px;
@@ -126,12 +140,10 @@
   }
 
   .eb-right {
-    padding-left: 15px;
-    float: left;
+    float: right;
   }
 
   .e-content {
-
     text-align: left;
   }
 

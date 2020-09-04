@@ -33,6 +33,7 @@
   import Bottom from '../../components/Bottom.vue'
   //import $ from 'jquery'
   import {goAnchor,GetQueryString} from '../../assets/js/common.js';
+  import $ from "jquery";
   export default {
     components:{
       ParkingSystem,
@@ -48,6 +49,22 @@
     },
 
     mounted:function (){
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+      console.log(this.screenHeight,this.screenWidth)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.p-content-item,.divider').css("width","1600px");
+        $('.test1,.test,.test2').css("width","1600px");
+        $('.test2').css('height','2400px')
+      }
+
        let maodian=this.GetQueryString('maodian');//进入页面，如果带有锚点参数，则跳转至锚点地方，参数值就是id名
          console.log("000"+maodian)
        console.info("*****",maodian)

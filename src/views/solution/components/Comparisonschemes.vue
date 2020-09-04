@@ -196,7 +196,7 @@ export default {
 
       top: 10px;
       position: relative;
-     
+
       width: 120px;
       height: 0.5px;
       background-color:#2e2e2e;
@@ -206,7 +206,7 @@ export default {
         text-align: center !important;
         color: #F79646 !important;
         font-size: 18px;
-        font-weight:0
+        font-weight:0;
   }
   .ant-table-row > td:nth-child(2) {
         text-align: center !important;
@@ -237,7 +237,7 @@ td.column-money {
   .all{
     padding-left: 50px;
     padding-right: 50px;
-    width: 1200px;
+    /*width: 1200px;*/
     margin: 0 auto;
   }
   .h2{

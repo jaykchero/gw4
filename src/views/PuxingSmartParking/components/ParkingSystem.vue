@@ -52,7 +52,7 @@
 
             <div class="ps-bottom">
               <div class="tl1"><h3 class="lh33">系列优势</h3></div>
-              <div class="xlys ">
+              <div class="xlys">
                 <Xlys ></Xlys>
 
               </div>
@@ -67,6 +67,7 @@
 
 <script>
     import Xlys from './advAboutOurs.vue'
+    import $ from "jquery";
   export default {
    components:{
      Xlys
@@ -85,6 +86,22 @@
       }
     },
     mounted() {
+
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+     // console.log(this.screenHeight,this.screenWidth)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.ps-center img').css({"width":"1200px","height":"900px","margin-top":"0px"});
+        $('.ps-center').css({"width":"1240px","height":"940px","margin-top":"200px"})
+       $('.xlys').css({"width":"1600px !important;","height":"600px  !important;"});
+      }
 
 
        this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
@@ -242,7 +259,7 @@
      }
 
     .ps-all {
-      width: 1200px;
+      /*width: 1200px;*/
       margin: 0 auto;
     }
     .ps-header{

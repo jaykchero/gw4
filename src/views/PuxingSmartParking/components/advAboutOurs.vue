@@ -1,7 +1,7 @@
 <template>
 
-  <div class="container">
-  <div class="fade-in full-width">
+
+
   <div class="adv"   >
     <div class="left">
 
@@ -29,12 +29,13 @@
     </div>
 
   </div>
-  </div>
-    </div>
+
 </template>
 
 <script>
 
+
+  import $ from "jquery";
 
   export default{
 
@@ -68,6 +69,21 @@
 
           },
     mounted() {
+
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+      console.log(this.screenHeight,this.screenWidth)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.adv').css("width","1600px");
+       
+      }
 
 
       this.fadeInElements = Array.from(document.getElementsByClassName('left1'))
@@ -151,10 +167,12 @@
   }
 
 
+
   .adv{
     display: flex;
     width: 1200px;
-    height: 600px;
+
+    height: 600px !important;
     margin: 0 auto;
     align-items:  center ;
    justify-content: space-between;

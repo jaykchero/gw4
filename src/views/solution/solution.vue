@@ -75,11 +75,29 @@
 
       data(){
         return{
-          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg'
+          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg',
+          screenWidth:'',
+          screenHeight:'',
+
         }
       },
 
        mounted:function (){
+        this.screenWidth = document.body.clientWidth;
+         this.screenHeight = document.body.clientHeight;
+         window.onresize = () => {
+           return (() => {
+             this.screenWidth = document.body.clientWidth;
+             this.screenHeight = document.body.clientHeight;
+           })();
+         };
+          console.log(this.screenHeight,this.screenWidth)
+         if(this.screenWidth>1600||this.screenHeight>900){
+           $('.solution-all-item,.divider').css("width","1600px");
+           $('.solution').css("width","1600px");
+         }
+
+
          this.divider = Array.from(document.getElementsByClassName('divider'))
          // 监听鼠标滚动事件
          document.addEventListener('scroll', this.handleScroll)

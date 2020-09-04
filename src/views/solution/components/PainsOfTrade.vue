@@ -26,9 +26,29 @@
 
 <script>
   import Swiper from "swiper"
+  import $ from "jquery";
   export default {
     mounted() {
-     var swiper = new Swiper('.swiper-container', {
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+      console.log(this.screenHeight,this.screenWidth)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.pp,.divider').css("margin-left","50px");
+        $('.swiper-container').css({"width":"1200px","overflow":"hidden"})
+        $('.swiper-slide').css({"width":"700px","height":"500px"})
+      }
+
+
+
+
+      var swiper = new Swiper('.swiper-container', {
           slidesPerView: 3,
           spaceBetween: 100,
           centeredSlides: true,
@@ -56,6 +76,7 @@
 
 <style scoped="scoped">
     .potheader{
+
       padding-left: 50px;
       padding-right: 50px;
     }
@@ -157,6 +178,7 @@
 	}
 
   .desc {
+
   	width: 80%;
   	text-align: center;
   	display: inline-block;
