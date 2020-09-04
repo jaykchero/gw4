@@ -9,12 +9,12 @@
       <h3 class="h3 left1">{{adv1.title2}}</h3>
      <!--  <h3 class="lh3">{{englist2}}</h3> -->
        <p class="p left1" >{{adv1.info2}}</p>
-       <h3 class="h3 left1">{{adv1.title3}}</h3>
+       <h3 class="h3 left1" >{{adv1.title3}}</h3>
         <p class="p left1">{{adv1.info3}}</p>
-      <p class="p left1" style="margin-bottom: 30px">{{adv1.info5}}</p>
-      <h3 class="h3 left1">{{adv1.title4}}</h3>
-      <p class="p left1" style="margin-bottom: 30px">{{adv1.info4}}</p>
-      <h3 class="h3 left1">{{adv1.title5}}</h3>
+      <p class="p left1" >{{adv1.info5}}</p>
+      <h3 class="h3 left1" style="margin-top: 30px">{{adv1.title4}}</h3>
+      <p class="p left1">{{adv1.info4}}</p>
+      <h3 class="h3 left1" style="margin-top: 30px">{{adv1.title5}}</h3>
       <p class="p left1">{{adv1.info6}}</p>
     </div>
 
@@ -82,7 +82,7 @@
       console.log(this.screenHeight,this.screenWidth)
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.adv').css("width","1600px");
-       
+
       }
 
 

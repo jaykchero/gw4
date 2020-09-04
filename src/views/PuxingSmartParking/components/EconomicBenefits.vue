@@ -10,7 +10,7 @@
         <img class="eb " v-lazy="eb" alt="">
       </div>
       <div class="eb-right ">
-        <h2 class="h3 tl2">以左图为例：</h2>
+        <h2 class="h3 tl2" >以左图为例：</h2>
           <p class="tl2">一天24小时此图为中午12：00左右</p>
         <p class="tl2">平均1个车已经收费接近20元</p>
         <p class="tl2">按照某三级市的收费标准：</p>
@@ -112,11 +112,11 @@
 
 <style scoped>
 
-
-  p{
-    font-size:15px;
-    line-height: 20px;
+  .tl2{
+    margin-bottom: 15px;
+    font-size: 15px;
   }
+
 
   .h3{
     margin-top: 10px;

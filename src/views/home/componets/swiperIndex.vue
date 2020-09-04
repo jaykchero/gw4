@@ -72,8 +72,12 @@
 
       }
 
-      this.left = Array.from(document.getElementsByClassName('banner-swiper'))
-      document.addEventListener('scroll', this.handleScroll4)
+      this.left = Array.from(document.getElementsByClassName('.swiper-pagination'))
+      document.addEventListener('scroll', this.handleScroll3)
+
+
+
+
       var swiper = new Swiper('.banner-swiper',{
       		  autoplay: {
       			delay: 5000,
@@ -92,19 +96,6 @@
       		  pagination: {
       		  			el: '.swiper-pagination',
       		  			clickable :true,
-
-
-      		  		  // renderBullet: function (index, className) {
-                  //   var text="";
-      		  		  //         switch(index){
-      		  		  //           case 0:text='';break;
-      		  		  //           case 1:text='';break;
-      		  		  //           case 2:text='';break;
-      		  		  //           case 3:text='';break;
-      		  		  //           case 4:text='';break;
-      		  		  //         }
-      		  		  //         return '<span class="' + className + '">' + text + '</span>';
-      		  		  //       },
       		  		  },
       		  navigation: {
       			nextEl: '.swiper-button-next',
@@ -126,6 +117,27 @@
       		window.onresize=function(){
       		  swiper.update();
       		}
+    },
+    methods:{
+
+      // 循环判断是否要触发过渡
+      handleScroll3 (evt) {
+        for (var i = 0; i < this.left.length; i++) {
+          var elem = this.left [i]
+          var cN =elem.className
+          if (this.isElemVisible(elem)) {
+            elem.className=cN+" "+"animated slideInUp"
+            this.left.splice(i, 1) // 只让它运行一次
+          }
+        }
+      },
+      // 判断元素距离窗口的位置
+      isElemVisible (el) {
+        var rect = el.getBoundingClientRect()
+        var elemTop = rect.top + 200 // 200 = buffer
+        var elemBottom = rect.bottom
+        return elemTop < window.innerHeight && elemBottom >= 0
+      }
     }
 
 

@@ -81,26 +81,7 @@
       margin: 0;
 
   }
-  .container{
-    background-color: #FFFFFF !important;
-    position: relative;
-    height: 600px !important;
-    width: 1200px;
 
-  }
-  .header{
-     position: relative;
-     left: 23px;
-     padding: 20px;
-     height: 200px;
-
-  }
-  .header-left{
-
-    position: absolute;
-    left: 0px;
-
-  }
   .header h1{
    color: #477e9a;
   font-size: 36px;

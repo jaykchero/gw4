@@ -196,7 +196,7 @@
       margin: 0 auto;
       margin-bottom: 100px;
       font-family: 'Nunito', sans-serif;
-      background: linear-gradient(to left, #2475a6, #2475a6);
+      background: linear-gradient(to left, #2475a6, #ffffff);
       padding: 20px;
       width: 940px;
       height: 640px;
@@ -220,7 +220,7 @@
         height: 140px;
 
         font-family: 'Nunito', sans-serif;
-        background: linear-gradient(to left, #2475a6, #2475a6);
+        background: linear-gradient(to left, #19bcb8, #1da1bc);
         padding: 5px;
 
         list-style: none;

@@ -7,10 +7,10 @@
       <h2 class="h2 left1  animated slideInDown">{{title1}}</h2>
       <h3 class="lh3 animated slideInDown">{{englist}}</h3>
       <div class="animated slideInUp">
-      <p class="pp left1">{{info}}</p>
-      <h3 class="h3 left1">{{title2}}</h3>
+      <p class="pp left1" style="margin-bottom: 30px">{{info}}</p>
+      <h3 class="h3 left1" >{{title2}}</h3>
      <!--  <h3 class="lh3">{{englist2}}</h3> -->
-       <p class="pp left1">{{info2}}</p>
+       <p class="pp left1" style="margin-bottom: 30px">{{info2}}</p>
        <h3 class="h3 left1">{{title3}}</h3>
       <!--  <h3 class="lh3">{{englist3}}</h3> -->
         <p class="pp left1">{{info3}}</p>
@@ -44,41 +44,14 @@
              this.left1 = Array.from(document.getElementsByClassName('left'))
               this.right = Array.from(document.getElementsByClassName('right'))
 
-             // document.addEventListener('scroll', this.handleScroll2)
-             // document.addEventListener('scroll', this.handleScroll3)
+
 
 
 
             },
 
            methods: {
-            // handleScroll3 (evt) {
-            //   for (var i = 0; i < this.right.length; i++) {
-            //     var elem = this.right[i]
-            //     //console.log(elem.className)
-            //     var cN=elem.className
-            //     if (this.isElemVisible(elem)) {
-            //       elem.className=cN+" "+"animated slideInRight"
-            //       // console.log(elem.className)
-            //       this.right.splice(i, 1) // 只让它运行一次
-            //     }
-            //   }
-            // },
 
-
-             // handleScroll2 (evt) {
-             //   for (var i = 0; i < this.left1.length; i++) {
-             //     var elem = this.left1[i]
-             //     //console.log(elem.className)
-             //     var cN=elem.className
-             //     if (this.isElemVisible(elem)) {
-
-             //       elem.className=cN+" "+"animated slideInUp"
-             //      //  console.log(elem.className)
-             //       this.left1.splice(i, 1) // 只让它运行一次
-             //     }
-             //   }
-             // },
 
              // 判断元素距离窗口的位置
                 isElemVisible (el) {
@@ -133,8 +106,8 @@
 
   .pp{
   color: #605656;
-  margin-top: 20px;
-  line-height: 24px !important;
+
+  line-height: 30px !important;
   text-align: left;
   }
 
@@ -163,9 +136,10 @@
         text-align: left;
         font-size: 30px;
         line-height: 36px;
-        margin: 5px 0 0;
+
         font-family: "itcavantgardepro-bk";
         position: relative;
+        margin-bottom: 30px;
   }
 
 

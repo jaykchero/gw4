@@ -16,7 +16,7 @@
                   <span class="post">项目已经落地</span>
                 </div>
                 <ul class="icon">
-                  <li><a href="#">更多<i class="fa fa-search"></i></a></li>
+                  <li><router-link to="/putian">更多</router-link><i class="fa fa-search"></i></li>
 <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>
@@ -29,7 +29,7 @@
                   <span class="post">正在洽谈落地事宜...</span>
                 </div>
                 <ul class="icon">
-                  <li><a href="#">更多<i class="fa fa-search"></i></a></li>
+                  <li><router-link to="/beijing">更多</router-link><i class="fa fa-search"></i></a></li>
 <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>

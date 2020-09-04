@@ -11,12 +11,12 @@
          <div class="swiper-container">
            <div class="swiper-wrapper">
              <div class="swiper-slide init ">
-               <img class="img" src="http://qexz4xnye.hn-bkt.clouddn.com/test.png" alt="">
+               <img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/cheweinanqiu.png" alt="">
                <p class="desc init ">车位已满</p>
              </div>
-             <div class="swiper-slide"><img class="img" src="http://qexz4xnye.hn-bkt.clouddn.com/test02.png" alt=""> <p class="desc init">人工收费频繁</p></div>
-             <div class="swiper-slide"><img class="img" src="http://qexz4xnye.hn-bkt.clouddn.com/test03.png" alt=""><p class="desc init">车辆乱停</p></div>
-             <div class="swiper-slide"><img class="img" src="http://qexz4xnye.hn-bkt.clouddn.com/test04.png" alt=""><p class="desc init">电动车占用车位</p></div>
+             <div class="swiper-slide"><img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/rengongshoufei.png" alt=""> <p class="desc init">人工收费频繁</p></div>
+             <div class="swiper-slide"><img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/cheliangluanting.png" alt=""><p class="desc init">车辆乱停</p></div>
+             <div class="swiper-slide"><img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/dianchezhanwei.png" alt=""><p class="desc init">电动车占用车位</p></div>
            </div>
          <!-- <div class="swiper-pagination"></div> -->
          </div>
@@ -136,7 +136,12 @@
 
     }
     .img{
-      /* border:2px solid #F79646; */
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to left, #19bcb8, #2475a6);
+      padding: 5px;
+
+      list-style: none;
+      border: 1px solid rgba(223,231,239, .7);
     }
     img{
       width: 550px;

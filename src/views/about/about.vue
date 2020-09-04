@@ -96,7 +96,6 @@
 
        this.screenWidth = document.body.clientWidth;
        this.screenHeight = document.body.clientHeight;
-
        window.onresize = () => {
          return (() => {
            this.screenWidth = document.body.clientWidth;
@@ -107,8 +106,6 @@
        if(this.screenWidth>1600||this.screenHeight>900){
          $('.about-all-item,.divider').css("width","1600px");
          $('.about').css("width","1600px");
-
-
        }
 
 

@@ -42,15 +42,29 @@
 <!--            <span-->
 <!--              > <router-link to="#/about">知识产权</router-link></span>-->
 <!--           </a-menu-item>-->
-           <a-menu-item key="setting:5">
-             <a :href="'#/about?maodian=ProjectExperience'">项目经验</a>
+<!--           <a-menu-item key="setting:5">-->
+<!--             <a :href="'#/about?maodian=ProjectExperience'">项目经验</a>-->
+<!--           </a-menu-item>-->
 
-           </a-menu-item>
+
+          <a-sub-menu>
+             <span slot="title" @click="dhcli"
+             >  <a :href="'#/about?maodian=ProjectExperience'">项目经验</a></span
+             >
+            <a-menu-item-group >
+            <a-menu-item key="1" @click="dhcli">
+              <li><router-link to="/putian">莆田</router-link></li>
+            </a-menu-item>
+            <a-menu-item key="2" @click="dhcli">
+              <li><router-link to="/beijing">北京</router-link></li>
+            </a-menu-item>
+
+              </a-menu-item-group >
+          </a-sub-menu>
 
           <a-menu-item key="setting:3">
             <span>
-            <a :href="'#/about?maodian=DevelopmentHistory'">发展历程</a>
-              <!-- <a href="/about/#DevelopmentHistory">普行文化</a> -->
+              <a :href="'#/about?maodian=DevelopmentHistory'">发展历程</a>
            </span>
           </a-menu-item>
 
@@ -83,9 +97,6 @@
              <a :href="'#/solution?maodian=EquipmentDisplay'">设备展示</a>
            </span>
            </a-menu-item>
-
-
-
          </a-menu-item-group>
       </a-sub-menu>
       <a-sub-menu>
@@ -109,7 +120,28 @@
       </a-sub-menu>
 
 
+   <a-sub-menu>
+        <span slot="title" class="submenu-title-wrapper" @click="dhcli"
+        > <router-link to="/puxingSmartParking">普行停车</router-link></span>
+     <a-menu-item-group >
+       <a-menu-item key="setting:1">
+         <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a>
+       </a-menu-item>
+
+
+       <a-menu-item key="setting:3">
+         <a :href="'#/puxingSmartParking?maodian=t3'">经济效益</a>
+       </a-menu-item>
+       <a-menu-item key="setting:4">
+         <a href="http://www.ptyibo.com/#/login" target="_blank">员工登录</a>
+       </a-menu-item>
+     </a-menu-item-group>
+   </a-sub-menu>
+
+
     </a-menu>
+
+
 
 
    </div>

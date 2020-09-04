@@ -40,6 +40,8 @@
 
 <script>
 
+  import $ from "jquery";
+
   export default {
 
     date () {
@@ -52,6 +54,24 @@
     },
 
     mounted() {
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+      console.log(this.screenHeight)
+      if(this.screenWidth>1600||this.screenHeight>900){
+        $('.b-center,.bottom-b').css("width","1600px");
+        $('.c-center').css({"position":"absolute","left":"750px"});
+        $('.c-right').css({"position":"absolute","left":"1600px"});
+
+
+      }
+
       this.left = Array.from(document.getElementsByClassName('af'))
       document.addEventListener('scroll', this.handleScroll4)
     },

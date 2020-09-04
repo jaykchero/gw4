@@ -6,18 +6,18 @@
   <div class="adv" :class="{toleft:isToLeft}">
     <div class="left2" >
       <h2 class="h2 tl1">{{title1}}</h2>
-      <h3 class="lh3 tl1">{{englist}}</h3>
-      <p class="p tl1">{{info}}</p>
+      <h3 class="lh3 tl1" style="margin-bottom: 30px">{{englist}}</h3>
+      <p class="p tl1" >{{info}}</p>
       <h3 class="h3 tl1">{{title2}}</h3>
       <p class="p tl1">{{info2}}</p>
-      <p class="p tl1">平台经济一体化，打造大数据信息中心；</p>
+      <p class="p tl1" style="margin-bottom: 30px">平台经济一体化，打造大数据信息中心；</p>
 
        <h3 class="h3 tl1">{{title3}}</h3>
         <p class="p tl1">{{info3}}</p>
-        <p class="p tl1">客户应用端，系统监控平台、以及施工端、巡查端，全方面立体式服务于运营管理者；</p>
+        <p class="p tl1" style="margin-bottom: 30px">客户应用端，系统监控平台、以及施工端、巡查端，全方面立体式服务于运营管理者；</p>
         <h3 class="h3 tl1">{{title4}}</h3>
         <p class="p tl1">{{info4}}</p>
-         <p class="p tl1">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
+         <p class="p tl1" style="margin-bottom: 30px">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
 
     </div>
     <div class="right" >
