@@ -118,27 +118,7 @@
            </a-menu-item>
          </a-menu-item-group>
       </a-sub-menu>
-
-
-   <a-sub-menu>
-        <span slot="title" class="submenu-title-wrapper" @click="dhcli"
-        > <router-link to="/puxingSmartParking">普行停车</router-link></span>
-     <a-menu-item-group >
-       <a-menu-item key="setting:1">
-         <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a>
-       </a-menu-item>
-
-
-       <a-menu-item key="setting:3">
-         <a :href="'#/puxingSmartParking?maodian=t3'">经济效益</a>
-       </a-menu-item>
-       <a-menu-item key="setting:4">
-         <a href="http://www.ptyibo.com/#/login" target="_blank">员工登录</a>
-       </a-menu-item>
-     </a-menu-item-group>
-   </a-sub-menu>
-
-
+   
     </a-menu>
 
 
