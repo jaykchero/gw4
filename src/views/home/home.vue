@@ -7,20 +7,26 @@
       <swiper-slide class="swiper-slide slide-two">
       <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 <!--        <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>-->
-        <p class="p">项目经验</p>
-        <p>鼠标选中查看详情</p>
+        <div class="page1">
+          <p class="p">项目经验</p>
+          <p class="pp">鼠标选中查看详情</p>
+        </div>
+
         <Protecteds></Protecteds>
 
       </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
-        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-              <my-adv
-               is-to-left=true
-              :title1=" adv2.title1" :info="adv2.info" :title2="adv2.title2"
-          :list="adv2.list" :img="adv2.img">
-          </my-adv>
-        </div>
+       <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
+         <News></News>
+     </div>
+
+        <!-- <my-adv-->
+        <!--              is-to-left=true-->
+          <!--              :title1=" adv2.title1" :info="adv2.info" :title2="adv2.title2"-->
+          <!--          :list="adv2.list" :img="adv2.img">-->
+          <!--          </my-adv>-->
+
       </swiper-slide>
     </swiper>
 
@@ -32,9 +38,11 @@
   import myAdv from './componets/adv.vue'
   import * as swiperAni from '../../assets/js/animate.js' //根据自己的路径进行引入
   import Protecteds from '../about/componets/ProjectExperience'
+  import News from "./componets/News";
 
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+
 export default {
 
   components: {
@@ -42,7 +50,8 @@ export default {
     SwiperIndex,
     swiper,
     swiperSlide,
-    myAdv,
+    //myAdv,
+    News
 
   },
   data() {
@@ -101,11 +110,7 @@ export default {
       }
     };
   },
-  created() {
 
-
-
-  },
   // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
   computed: {
     swiper() {
@@ -118,15 +123,36 @@ export default {
 
 <style lang="scss" scoped>
 
+  .page1 {
+
+    text-align: center;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .slide-three {
+    height: 1080px !important;
+    background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/news.jpg) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+
+  }
+
 
   .slide-one{
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
-  .p{
-    font-size: 16px;
-    line-height: 20px !important;
+  .p {
+     font-size: 30px;
+     font-weight: 400;
+     color: #2e2e2e;
+   }
+  .pp {
+    font-size: 20px;
+    font-weight: 400;
+    color: #2e2e2e;
   }
 
 .swiper-slide {

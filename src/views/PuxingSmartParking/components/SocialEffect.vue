@@ -164,9 +164,10 @@
   }
 
   ul li {
+    margin-left: 10px;
     font-family: 'Nunito', sans-serif;
-    background: -webkit-linear-gradient(right, #ffffff, #29a5ff);
-    background: linear-gradient(to left, #ffffff, #29a5ff);
+    background: -webkit-linear-gradient(right, #ffffff, #2475a6);
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
     float: left;
     width: 350px;
     padding: 20px;
