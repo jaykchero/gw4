@@ -139,6 +139,8 @@
       font-family: 'Nunito', sans-serif;
       background: linear-gradient(to left, #19bcb8, #2475a6);
       padding: 5px;
+      width: 570px;
+      height: 370px;
 
       list-style: none;
       border: 1px solid rgba(223,231,239, .7);
