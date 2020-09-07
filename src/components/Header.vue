@@ -33,7 +33,7 @@
               >
               <!-- <a href="/about/#culture">普行文化</a> -->
               <!-- <router-link to="/about?maodian=culture">普行文化</router-link> -->
-               <a :href="'#/about?maodian=culture'">普行文化</a>
+               <a :href="'#/about?maodian=culture'">企业文化</a>
               </span>
            </a-menu-item>
 
