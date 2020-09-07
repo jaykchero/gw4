@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-md-4 col-sm-6">
               <div class="box">
-                <img v-lazy="pt"  style="width: 300;height: 230px">
+                <img v-lazy="pt"  style="height: 200px">
                 <div class="box-content">
                   <h3 class="title">莆田</h3>
                   <span class="post">项目已经落地</span>
