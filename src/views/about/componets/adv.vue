@@ -178,8 +178,8 @@
 
 
 img{
-     height: 497px;
-      width: 300px;
+  width: 400px;
+  height: 597px;
   /*font-family: 'Nunito', sans-serif;*/
   /*background: linear-gradient(to left, #ffffff, #ffffff);*/
   /*padding: 5px;*/
