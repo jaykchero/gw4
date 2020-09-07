@@ -57,23 +57,23 @@ export default {
   data() {
     return {
 
-      adv1: {
-        title1: '关注微信公众号小程序',
-        info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
-        title2: '优势特点',
-        img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
-        list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
-
-      },
-
-      adv2: {
-        title1: '关注微信公众号小程序',
-        info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
-        title2: '优势特点',
-        img: 'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
-        list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
-
-      },
+      // adv1: {
+      //   title1: '关注微信公众号小程序',
+      //   info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
+      //   title2: '优势特点',
+      //   img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
+      //   list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
+      //
+      // },
+      //
+      // adv2: {
+      //   title1: '关注微信公众号小程序',
+      //   info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
+      //   title2: '优势特点',
+      //   img: 'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
+      //   list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
+      //
+      // },
 
       loading: true,
       caseList: [],
@@ -144,15 +144,21 @@ export default {
     height: 100%;
     overflow: hidden;
   }
+  .slide-two{
+     width:100%; float:left; height:819px; background:url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices.jpg) no-repeat center; background-size:cover;
+  }
+
+
+
   .p {
      font-size: 30px;
      font-weight: 400;
-     color: #2e2e2e;
+     color: #ffffff;
    }
   .pp {
     font-size: 20px;
     font-weight: 400;
-    color: #2e2e2e;
+    color: #ffffff;
   }
 
 .swiper-slide {

@@ -44,7 +44,7 @@
 
     data () {
       return {
-        hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg'
+        hb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/bgtop.ed43ac53.jpg'
       }
     },
 

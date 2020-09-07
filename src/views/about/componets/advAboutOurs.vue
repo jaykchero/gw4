@@ -69,10 +69,9 @@
 
 <style scoped="scoped">
   .right{
-    top: 50px;
-    right: 50px;
-    position: absolute;
-    width: 500px;
+   float: right;
+    width: 50%;
+
   }
 
   .toleft{
@@ -144,8 +143,8 @@
 
 
     img{
-      width: 497px;
-      height: 497px;
+      width: 400px;
+      height: 597px;
 
     }
 

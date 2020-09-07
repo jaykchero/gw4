@@ -20,31 +20,14 @@
                     <div class="Choicesbut"><a href="https://aiqicha.baidu.com/company_detail_30684142241006?rq=ef&pd=ee&from=ps" target="_blank">了解更多</a></div>
                   </div>
                 </li>
-                <li>
-                  <div class="Choices_left"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices2.jpg" width="100%"></div>
-                  <div class="Choices_right">
-                    <h1>师资力量雄厚</h1>
-                    <h2></h2>
-                    <p>站长素材机构13年起便推进教师全职化，吸纳北京广州优秀师资力量，提升教学团队硬实力，专注课程服务自升级，构建标准化课程体系，致力于让每一个学员都爱上学习并从中受益。</p>
-                    <div class="Choicesbut"><a onclick="interactive.openNtkf('0','')">了解站长素材</a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="Choices_left"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices3.jpg" width="100%"></div>
-                  <div class="Choices_right">
-                    <h1>精良课程模块</h1>
-                    <h2></h2>
-                    <p>优质课程设计，基础知识点详解，精选题库训练点拨，高频知识点切片解析，考前精编模拟题演练。</p>
-                    <div class="Choicesbut"><a href="https://aiqicha.baidu.com/company_detail_30684142241006?rq=ef&pd=ee&from=ps" target="_blank">了解更多</a></div>
-                  </div>
-                </li>
+
+
               </ul>
             </div>
             <div class="Choicestel">
               <ul>
-                <li><01/03></li>
-                <li><02/03></li>
-                <li><03/03></li>
+                <li><01/01></li>
+
               </ul>
             </div>
           </div>

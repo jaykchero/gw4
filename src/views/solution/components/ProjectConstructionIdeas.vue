@@ -31,7 +31,7 @@
     data() {
       return {
         adv1:{
-          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/iphone.png',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20181202000814_ddc83f71530458863bcd9120b4f7fecc_10.jpeg',
           title1:'项目建设思路',
           englist:'Project construction ideas',
           title2:'建设智能停车系统',

@@ -34,7 +34,7 @@
     data() {
       return {
         adv1:{
-          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/notebook.png',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/sb1.png',
           title1:'设备2展示',
           englist:'Equipment Display',
 

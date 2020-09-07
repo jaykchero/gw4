@@ -97,7 +97,7 @@
 
 
   .sbright{
-    width: 50%;
+    width: 100%;
   }
   .toleft{
     flex-direction: row-reverse;
@@ -133,7 +133,7 @@
 
     .left{
       vertical-align: top;
-      width: 50%;
+      width: 20;
     }
 
 
@@ -172,8 +172,8 @@
 
 
     img{
-      width: 249px !important;
-      height: 497px !important;
+      width: 80% !important;
+      height: 80% !important;
 
     }
 

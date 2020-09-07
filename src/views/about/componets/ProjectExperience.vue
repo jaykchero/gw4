@@ -29,7 +29,7 @@
                   <span class="post">正在洽谈落地事宜...</span>
                 </div>
                 <ul class="icon">
-                  <li><router-link to="/beijing">更多</router-link><i class="fa fa-search"></i></a></li>
+                  <li><router-link to="#">更多</router-link><i class="fa fa-search"></i></a></li>
 <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>

@@ -103,7 +103,7 @@
 
   .right{
     float: right;
-
+    width: 50%;
   }
 
     .ap-all{
@@ -119,6 +119,7 @@
     .left2{
       vertical-align: top;
       float: left;
+      width: 50%;
     }
 
 
@@ -161,8 +162,8 @@
 
 
 img{
-      width: 249px;
-      height: 497px;
+      width: 520px;
+      height: 450px;
 
     }
 

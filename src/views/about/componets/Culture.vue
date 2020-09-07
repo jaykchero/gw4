@@ -22,7 +22,7 @@
 
 <script>
   import culture from './adv.vue'
- 
+
 
   export default{
 
@@ -33,7 +33,7 @@
     data() {
       return {
         adv1:{
-          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/cul11.png',
           title1:'普行文化',
           englist:'Corporate Culture',
           title2:'务实：立足之本',

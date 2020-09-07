@@ -62,7 +62,7 @@
                   '为车主带来方便快捷的停车体验\n' +
                   '大大提高车位管理效率，真正打造高效\n' +
                   '、智能化的停车体验。',
-                img:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/shibie.png",
+                img:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/sb1.png",
 
               },
             }
@@ -141,29 +141,20 @@
 <style scoped="scoped">
 
   ul li {
-    font-family: 'Nunito', sans-serif;
 
-    background: linear-gradient(to left, #14679f, #FFFFFF);
-    margin-right: 120px;
-    width: 450px;
-    padding: 20px;
-    list-style: none;
-    height: 450px;
-    border: 1px solid rgba(223,231,239, .7);
-    transition: all .2s ease;
+    transition: all .5s ease;
 
-  }
+
+     }
 
   ul li:hover{
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.5);
-    -moz-box-shadow: 0 -1px 10px rgba(0,0,0,.5);
-    box-shadow: 0 -1px 10px rgba(0,0,0,.5);
+
+
+
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+
   }
 
 
@@ -182,6 +173,10 @@
   .left{
     vertical-align: top;
     width: 50%;
+  }
+  .right{
+    width: 50%;
+    margin-right: 50px;
   }
 
 
@@ -208,7 +203,7 @@
 
     img{
 
-      width: 400px;
+      width: 500px;
       height: 400px;
 
     }

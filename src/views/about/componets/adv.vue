@@ -112,10 +112,10 @@
 <style scoped>
 
   .right{
-    top: 50px;
-    right: 20px;
     position: absolute;
-    width: 500px;
+    top: 50px;
+    right: 0px;
+    width: 50%;
   }
 
   .adv{
@@ -178,8 +178,15 @@
 
 
 img{
-      width: 497px;
-      height: 497px;
+     height: 497px;
+      width: 300px;
+  /*font-family: 'Nunito', sans-serif;*/
+  /*background: linear-gradient(to left, #ffffff, #ffffff);*/
+  /*padding: 5px;*/
+
+
+  /*list-style: none;*/
+  /*border: 1px solid rgba(223,231,239, .7);*/
 
     }
 

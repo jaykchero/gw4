@@ -33,7 +33,7 @@
     data() {
       return {
         adv1:{
-          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/iphone.png',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/sb2.png',
           title1:'设备1展示',
           englist:'Equipment Display',
 

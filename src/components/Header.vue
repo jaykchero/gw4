@@ -55,9 +55,9 @@
             <a-menu-item key="1" @click="dhcli">
               <li><router-link to="/putian">莆田</router-link></li>
             </a-menu-item>
-            <a-menu-item key="2" @click="dhcli">
-              <li><router-link to="/beijing">北京</router-link></li>
-            </a-menu-item>
+<!--            <a-menu-item key="2" @click="dhcli">-->
+<!--              <li><router-link to="/beijing">北京</router-link></li>-->
+<!--            </a-menu-item>-->
 
               </a-menu-item-group >
           </a-sub-menu>
@@ -120,7 +120,7 @@
       </a-sub-menu>
 
     </a-menu>
-     
+
    </div>
 
 
