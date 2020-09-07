@@ -44,14 +44,14 @@
           <img  class="tl1" v-lazy="i2" alt="">
         </div>
 
-        <div class="divider tl1" style="margin-left: 0px">
+        <div class="divider1 tl1">
           <a-divider>
-            <svg t="1597299904979" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="990" width="32" height="32"><path d="M512 512m-442.7 0a442.7 442.7 0 1 0 885.4 0 442.7 442.7 0 1 0-885.4 0Z" fill="#F79646" p-id="991" data-spm-anchor-id="a313x.7781069.0.i2" class=""></path><path d="M512 512m-263 0a263 263 0 1 0 526 0 263 263 0 1 0-526 0Z" fill="#ffffff" p-id="992" data-spm-anchor-id="a313x.7781069.0.i5" class="selected"></path></svg>
+            <div class="tl1"><h3 class="lh33">系列优势</h3></div>
           </a-divider>
         </div>
 
             <div class="ps-bottom">
-              <div class="tl1"><h3 class="lh33">系列优势</h3></div>
+
               <div class="xlys">
                 <Xlys ></Xlys>
 
