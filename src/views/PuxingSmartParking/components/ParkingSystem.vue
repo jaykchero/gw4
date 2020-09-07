@@ -245,7 +245,7 @@
     .lh33{
       color: #555;
       text-align: center;
-      font-size: 25px;
+      font-size: 23px;
       line-height: 36px;
       margin: 5px 0 0;
       font-family: "itcavantgardepro-bk";

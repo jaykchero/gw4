@@ -119,6 +119,11 @@
          </a-menu-item-group>
       </a-sub-menu>
 
+   <a-sub-menu>
+        <span slot="title" class="submenu-title-wrapper" @click="dhcli"
+        > <router-link to="/constantUs">联系我们</router-link></span>
+   </a-sub-menu>
+
     </a-menu>
 
    </div>

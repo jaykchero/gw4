@@ -5,7 +5,7 @@
       <div class="header-left ">
        <h2 class="h2 tl1">常见路侧停车方案对比</h2>
        <h3 class="lh3  tl1">Comparison of parking schemes</h3>
-       <div class="liness tl1"></div>
+<!--       <div class="liness tl1"></div>-->
       </div>
     </div>
     <div class="context">
@@ -145,7 +145,7 @@ export default {
   mounted() {
        this.left = Array.from(document.getElementsByClassName('tl1'))
        document.addEventListener('scroll', this.handleScroll2)
-       this.context = Array.from(document.getElementsByClassName('c-text'))
+       this.context = Array.from(document.getElementsByClassName('ant-table-row'))
        document.addEventListener('scroll', this.handleScroll)
   },
   methods:{
@@ -231,7 +231,7 @@ td.column-money {
 
 
    .header{
-     padding-bottom: 150px;
+    margin-bottom: 50px;
    }
 
   .all{
@@ -251,7 +251,7 @@ td.column-money {
         z-index: 999;
          color: #555;
          text-align: left;
-         font-size: 25px;
+         font-size: 20px;
          line-height: 36px;
           top: -10px;
          font-family: "itcavantgardepro-bk";

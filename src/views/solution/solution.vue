@@ -100,7 +100,7 @@
          }
 
 
-         this.divider = Array.from(document.getElementsByClassName('divider'))
+         this.divider = Array.from(document.getElementsByClassName('divider1'))
          // 监听鼠标滚动事件
          document.addEventListener('scroll', this.handleScroll)
 
@@ -177,7 +177,7 @@
 
   .solution{
     padding-bottom: 65px;
-    height: 655px;
+    height: 650px;
     overflow: hidden;
   }
 

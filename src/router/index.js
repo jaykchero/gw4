@@ -51,6 +51,12 @@ const routes = [
     component: () => import( '../views/projects/BeiJing.vue')
   },
 
+  {
+    path:'/constantUs',
+    name: 'ConstantUs',
+    component: () => import( '../views/constantUs/ConstantUs')
+  },
+
 
 ]
 

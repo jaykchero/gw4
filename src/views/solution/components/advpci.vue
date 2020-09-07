@@ -153,7 +153,7 @@
     .lh3{
           color: #555;
           text-align: left;
-          font-size: 30px;
+          font-size: 23px;
           line-height: 36px;
           margin: 5px 0 0;
           font-family: "itcavantgardepro-bk";

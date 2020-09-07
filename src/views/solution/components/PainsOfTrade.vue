@@ -102,7 +102,7 @@
     left: 210px;
     color: #555;
     text-align: left;
-    font-size: 30px;
+     font-size: 23px;
     line-height: 36px;
     font-family: "itcavantgardepro-bk";
 
