@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-md-4 col-sm-6">
               <div class="box">
-                <img v-lazy="pt" >
+                <img v-lazy="pt"  style="width: 300;height: 230px">
                 <div class="box-content">
                   <h3 class="title">莆田</h3>
                   <span class="post">项目已经落地</span>
@@ -104,7 +104,7 @@ export default {
     data() {
         return {
 
-          pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/putian.jpg",
+          pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/putian.jpg",
           bj:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/beijing.jpg',
           heb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/haerbing.jpg',
           wz:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/wuzhou.jpg',

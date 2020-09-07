@@ -12,11 +12,11 @@
             <div class="Choices_banner">
               <ul>
                 <li>
-                  <div class="Choices_left"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/putian.jpg" width="100%"></div>
+                  <div class="Choices_left"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/putian.jpg" width="100%"></div>
                   <div class="Choices_right">
                     <h1>普行智能停车（深圳）有限公司莆田分公司</h1>
                     <h2></h2>
-                    <p>普行智能停车(深圳)有限公司莆田分公司成立于2020年04月02日，注册地位于福建省莆田市城厢区凤凰山街道龙平街67号</p>
+                    <p style="line-height: 20px">普行智能停车(深圳)有限公司莆田分公司成立于2020年04月02日，注册地位于福建省莆田市城厢区凤凰山街道龙平街67号</p>
                     <div class="Choicesbut"><a href="https://aiqicha.baidu.com/company_detail_30684142241006?rq=ef&pd=ee&from=ps" target="_blank">了解更多</a></div>
                   </div>
                 </li>
@@ -150,6 +150,10 @@
 </script>
 
 <style scoped>
+
+  .p{
+    line-height: 30px;
+  }
   .h-b img {
     width: 100%;
     height: 100%;

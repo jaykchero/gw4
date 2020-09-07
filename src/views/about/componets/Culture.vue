@@ -34,7 +34,7 @@
       return {
         adv1:{
           img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/cul11.png',
-          title1:'普行文化',
+          title1:'企业文化',
           englist:'Corporate Culture',
           title2:'务实：立足之本',
           info2:'以人为本，以客为先，实实在在，脚踏实地。在市场竞争中寻求企业发展与项目开发的适宜之路，以产品和服务创造价值，提升公司的市场竞争力。',
