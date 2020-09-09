@@ -11,7 +11,6 @@
           <div class="cl tl1">
              <img class="lii tl1" v-lazy="i1" alt="">
            <p class="tl1">
-
              车辆进出检测
            </p>
           </div>
@@ -130,7 +129,7 @@
                var elem = this.fadeInElements[i]
                  var cN=elem.className
                if (this.isElemVisible(elem)) {
-                elem.className=cN+" "+"animated slideInUp"
+                elem.className=cN+" "+"animated zoomIn"
                  console.log(elem.className)
                 this.fadeInElements.splice(i, 1) // 只让它运行一次
                }

@@ -90,7 +90,7 @@
           var elem = this.fadeInElements[i]
           var cN=elem.className
           if (this.isElemVisible(elem)) {
-            elem.className=cN+" "+"animated fadeInLeft"
+            elem.className=cN+" "+"animated zoomIn"
             console.log(elem.className)
             this.fadeInElements.splice(i, 1) // 只让它运行一次
           }

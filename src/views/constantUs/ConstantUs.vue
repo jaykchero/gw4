@@ -54,11 +54,23 @@
         <div id="allmap"></div>
       </div>
     </div>
+  <div>
+    <Bottom></Bottom>
+  </div>
+
 </div>
 </template>
 
 <script>
+
+  import Bottom from "../../components/Bottom";
+
+
     export default {
+
+      components:{
+        Bottom
+      },
         name: "ConstantUs",
       data () {
         return {
@@ -195,7 +207,7 @@
     height: 100%;
   }
   .h-b{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     width: 100%;
     height: 388px;
     overflow: hidden;
