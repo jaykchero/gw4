@@ -5,7 +5,7 @@
  		<a href="#" class="a a-service "><i class="i"></i></a>
  		<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
  		<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
- 		<a href="#" class="a a-cart"><i class="i"></i></a>
+<!-- 		<a href="#" class="a a-cart"><i class="i"></i></a>-->
  		<a href="javascript:;" class="a a-top"><i class="i"></i></a>
  		<div class="d d-service">
  			<i class="arrow"></i>
@@ -25,11 +25,11 @@
  						<p class="red number">0755-23286587</p>
  					</div>
  				</div>
- 				<!-- <div class="d-service-intro clearfix">
- 					<p><i></i>功能和特性</p>
- 					<p><i></i>价格和优惠</p>
- 					<p><i></i>获取内部资料</p>
- 				</div> -->
+<!-- 				 <div class="d-service-intro clearfix">-->
+<!-- 					<p><i></i>功能和特性</p>-->
+<!-- 					<p><i></i>价格和优惠</p>-->
+<!-- 					<p><i></i>获取内部资料</p>-->
+<!-- 				</div>-->
  			</div>
  		</div>
  		<div class="d d-qrcode">
@@ -94,9 +94,9 @@ export default {
 
 <style scoped src="../../assets/css/style.css">
 	img{
-	
-		
-		margin-bottom: 100px;		
+
+
+		margin-bottom: 100px;
 	}
 
 

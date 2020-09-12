@@ -19,7 +19,7 @@
     <div class="row b-center">
       <div class="col-md-4 col-sm-6">
         <div class="b-left  af">
-          <a href="#" class="c-logo"><img style="width: 120px;height: 60px" src="../assets/logo.png" alt=""></a>
+          <a href="#" class="c-logo"><img style="width: 160px;height: 55px" src="../assets/logo.png" alt=""></a>
           <br>
           <span>普行智能停车（深圳）有限公司</span>
         </div>
@@ -123,6 +123,7 @@
   body{
     text-align: center;
   }
+
   .container{
     width: 1200px !important;
     margin: 0 auto;
@@ -142,7 +143,7 @@
 
   .b-title{
     color: #f3f3f3;
-    margin-top: 65px;
+    margin-top: 60px;
     font-size: 24px;
     font-weight: bolder;
     float: left;
@@ -161,13 +162,14 @@
     width: 140px;
     height: 65px;
     float: left;
+    margin-top: -30px;
   }
 
   .cc-img {
-    margin-top: 65px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     margin-left: 30px;
   }
   .b-content{

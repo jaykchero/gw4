@@ -5,12 +5,12 @@
 <div class="h-all row" v-bind:class="{'animated fadeInDown':isReadyonly=='1',' ':isReadyonly!='1'}">
 <div class="h-top " >
 
-   <div class="h-logo col-sm" >
+   <div class="h-logo col-md-4 col-sm-6" >
 
       <i class="logo"></i>
    </div>
 
-   <div class="h-header col-sm">
+   <div class="h-header col-md-4 col-sm-6">
  <a-menu v-model="current" mode="horizontal" router :default-active="$route.path" v-bind:class="{'header-menu':isScroll=='1',' ':isScroll==0}">
       <a-sub-menu index="1">
         <span slot="title" class="submenu-title-wrapper " @click="dhcli"

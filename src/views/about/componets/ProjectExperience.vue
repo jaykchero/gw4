@@ -9,7 +9,7 @@
           <div class="row">
             <div class=" col-md-4 col-sm-6">
               <div class="box">
-                <img v-lazy="pt" >
+                <img v-lazy="pt"  >
                 <div class="box-content">
                   <h3 class="title">莆田</h3>
                   <span class="post">项目已经落地</span>
@@ -117,11 +117,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-
-  img{
-    width: 300px;
-    height: 200px;
-  }
+  
   .container{
     margin-top: 20px;
   }

@@ -41,7 +41,7 @@
 <style scoped>
 
   .news-all{
-    margin-bottom: 400px;
+    /*margin-bottom: 400px;*/
   }
 
   .news-context{

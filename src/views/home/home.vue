@@ -5,20 +5,19 @@
         <SwiperIndex ></SwiperIndex>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
-      <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-<!--        <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>-->
+      <div class="ani " swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
         <div class="page1">
           <p class="p">项目经验</p>
           <p class="pp">鼠标选中查看详情</p>
         </div>
-
         <Protecteds></Protecteds>
 
       </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-         <News></News>
+         <News style="height: 70%;"></News>
+         <Bottom style="margin-top:10px;height: 40%"></Bottom>
      </div>
 
         <!-- <my-adv-->
@@ -30,6 +29,8 @@
       </swiper-slide>
     </swiper>
 
+
+
   </div>
 </template>
 
@@ -39,6 +40,7 @@
   import * as swiperAni from '../../assets/js/animate.js' //根据自己的路径进行引入
   import Protecteds from '../about/componets/ProjectExperience'
   import News from "./componets/News";
+  import Bottom from "../../components/Bottom";
 
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
@@ -51,7 +53,9 @@ export default {
     swiper,
     swiperSlide,
     //myAdv,
-    News
+    News,
+    Bottom
+
 
   },
   data() {
@@ -123,8 +127,11 @@ export default {
 
 <style lang="scss" scoped>
 
-  .page1 {
 
+
+
+  .page1 {
+    margin-top: -30px;
     text-align: center;
     height: 100px;
     overflow: hidden;
@@ -145,7 +152,7 @@ export default {
     overflow: hidden;
   }
   .slide-two{
-     width:100%; float:left; height:819px; background:url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices.jpg) no-repeat center; background-size:cover;
+     width:100%;  height: 100%; background:url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices.jpg) no-repeat center; background-size:cover;
   }
 
 
