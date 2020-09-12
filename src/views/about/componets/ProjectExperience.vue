@@ -5,7 +5,6 @@
           <h3 class="lh3 tl1">Project Experience</h3>
         </div>
       <div>
-
         <div class="container">
           <div class="row">
             <div class=" col-md-4 col-sm-6">
@@ -16,7 +15,7 @@
                   <span class="post">项目已经落地</span>
                 </div>
                 <ul class="icon">
-                  <li><router-link to="#">更多</router-link><i class="fa fa-search"></i></a></li>
+                  <li><router-link to="/putian">更多</router-link><i class="fa fa-search"></i></li>
                   <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>
@@ -29,7 +28,7 @@
                   <span class="post">正在洽谈落地事宜...</span>
                 </div>
                 <ul class="icon">
-                  <li><router-link to="#">更多</router-link><i class="fa fa-search"></i></a></li>
+                  <li><router-link to="#">更多</router-link><i class="fa fa-search"></i></li>
 <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>
@@ -113,15 +112,7 @@ export default {
 
         };
     },
-    created() {
 
-    },
-    mounted() {
-
-    },
-    methods: {
-
-    }
 };
 </script>
 

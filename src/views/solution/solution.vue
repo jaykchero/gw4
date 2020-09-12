@@ -75,7 +75,7 @@
 
       data(){
         return{
-          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg',
+          hb1:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20191008040302949.jpg',
           screenWidth:'',
           screenHeight:'',
 

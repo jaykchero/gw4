@@ -45,7 +45,7 @@
         name: "Putian",
       data () {
           return {
-            hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg',
+            hb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20191008040012800.jpg',
           }
       },
       mounted() {
