@@ -163,6 +163,7 @@ export default {
     font-size: 15px;
     font-weight: 400;
     color: #ffffff;
+    margin-top: 20px;
   }
 
 .swiper-slide {
