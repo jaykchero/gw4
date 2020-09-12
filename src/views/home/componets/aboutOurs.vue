@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="adv">
    <!-- <div class="header">
       <div class="header-left">
       <h1>企业介绍</h1>
@@ -44,7 +44,7 @@
 </template>
 <script>
     import advAboutOurs from './advAboutOurs.vue'
-   
+
 
      import {TweenMax, Power2, TimelineLite,TweenLite} from "gsap";
 
@@ -82,7 +82,7 @@
       margin: 0;
 
   }
-  .container{
+  .adv{
     background-color: #FFFFFF !important;
     position: relative;
     height: 600px !important;

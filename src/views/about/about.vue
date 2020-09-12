@@ -1,18 +1,16 @@
 <template>
 
-  <div class="about-all">
-
-
-
-      <div class="h-b">
+  <div class="about-all ">
+      <div class="h-b ">
           <!-- <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt=""> -->
            <img v-lazy="hb">
-      </div>
+
+  </div>
+
  <div class="about-all-item">
       <div id="about1" class="about" >
          <about1></about1>
       </div>
-
         <div class="divider">
            <a-divider >
             <svg t="1597299904979" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="990" width="32" height="32"><path d="M512 512m-442.7 0a442.7 442.7 0 1 0 885.4 0 442.7 442.7 0 1 0-885.4 0Z" fill="#F79646" p-id="991" data-spm-anchor-id="a313x.7781069.0.i2" class=""></path><path d="M512 512m-263 0a263 263 0 1 0 526 0 263 263 0 1 0-526 0Z" fill="#ffffff" p-id="992" data-spm-anchor-id="a313x.7781069.0.i5" class="selected"></path></svg>
@@ -49,13 +47,8 @@
    <div id="DevelopmentHistory" class="about2" style="padding-top: 60px;">
      <DevelopmentHistory></DevelopmentHistory>
    </div>
-
-      </div>
-      <div class="about1">
+</div>
         <Bottom></Bottom>
-      </div>
-
-
 </div>
 </template>
 
@@ -82,7 +75,7 @@
 
         data () {
           return {
-              hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg',
+              hb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20191008040012800.jpg',
               divider:{},
               show:true,
             screenWidth:'',
@@ -160,6 +153,10 @@
 </script>
 <style>
 
+  .container{
+    width: 100% !important;
+    max-width:100%;
+  }
   .about-all-item{
 
     background-color: #FFFFFF;
@@ -204,5 +201,6 @@
     height: 655px;
     overflow: hidden;
   }
+
 
 </style>

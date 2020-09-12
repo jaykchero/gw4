@@ -1,15 +1,16 @@
 /* eslint-disable */
 <template>
-  <div v-bind:class="{'header-fixd animated fadeInDown all-background-color':isScroll=='1',' ':isScroll==0}">
-<div class="h-all" v-bind:class="{'animated fadeInDown':isReadyonly=='1',' ':isReadyonly!='1'}">
+  <div  class="container">
+  <div  v-bind:class="{'header-fixd animated fadeInDown all-background-color':isScroll=='1',' ':isScroll==0}">
+<div class="h-all row" v-bind:class="{'animated fadeInDown':isReadyonly=='1',' ':isReadyonly!='1'}">
 <div class="h-top " >
 
-   <div class="h-logo " >
+   <div class="h-logo col-sm" >
 
       <i class="logo"></i>
    </div>
 
-   <div class="h-header ">
+   <div class="h-header col-sm">
  <a-menu v-model="current" mode="horizontal" router :default-active="$route.path" v-bind:class="{'header-menu':isScroll=='1',' ':isScroll==0}">
       <a-sub-menu index="1">
         <span slot="title" class="submenu-title-wrapper " @click="dhcli"
@@ -31,21 +32,9 @@
            <a-menu-item key="setting:2">
             <span
               >
-              <!-- <a href="/about/#culture">普行文化</a> -->
-              <!-- <router-link to="/about?maodian=culture">普行文化</router-link> -->
                <a :href="'#/about?maodian=culture'">企业文化</a>
               </span>
            </a-menu-item>
-
-
-<!--           <a-menu-item key="setting:4">-->
-<!--            <span-->
-<!--              > <router-link to="#/about">知识产权</router-link></span>-->
-<!--           </a-menu-item>-->
-<!--           <a-menu-item key="setting:5">-->
-<!--             <a :href="'#/about?maodian=ProjectExperience'">项目经验</a>-->
-<!--           </a-menu-item>-->
-
 
           <a-sub-menu>
              <span slot="title" @click="dhcli"
@@ -55,10 +44,6 @@
             <a-menu-item key="1" @click="dhcli">
               <li><router-link to="/putian">莆田</router-link></li>
             </a-menu-item>
-<!--            <a-menu-item key="2" @click="dhcli">-->
-<!--              <li><router-link to="/beijing">北京</router-link></li>-->
-<!--            </a-menu-item>-->
-
               </a-menu-item-group >
           </a-sub-menu>
 
@@ -133,6 +118,7 @@
 </div>
 </div>
 </div>
+  </div>
 </template>
 
 <script>
@@ -278,6 +264,7 @@
     height: 65px;
     position:fixed !important;
     top:0px;
+  left: 0px;
     background-color: #eee ;
     z-index: 10;
     margin-bottom: 150px;

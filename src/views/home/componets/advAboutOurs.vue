@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container">
+  <div class="adv">
   <div class="fade-in full-width">
   <div class="adv" :class="{toleft:isToLeft}"  >
     <div class="left">
@@ -143,41 +143,6 @@
     }
 
 
-
-    /* 动画css */
-  .container {
-      display: table;
-      width: 80%;
-      min-width: 450px;
-      margin: 0 auto;
-    }
-
-    .fade-in {
-     
-      height: 500px;
-      margin-bottom: 50px;
-      opacity: 0;
-      transition: 0.5s all ease-out;
-      transform: scale(0.8);
-      box-sizing: border-box;
-      padding: 20px;
-      display: inline-block;
-    }
-    .full-width {
-      width: 100%;
-    }
-
-    .half-width {
-      width: 47.5%;
-    }
-
-    .half-width:nth-of-type(2n + 1) {
-      margin-right: 2.5%;
-    }
-
-    .half-width:nth-of-type(2n) {
-      margin-left: 2.5%;
-    }
 
 
 

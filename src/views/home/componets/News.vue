@@ -1,26 +1,28 @@
 <template>
     <div class="news-all">
+      <div class="container">
+
       <div class="page1">
         <h3 class="h3 tl1">最新资讯</h3>
         <p class="p tl1">Latest News</p>
       </div>
 
       <div>
-        <ul class="clearfix">
-          <li>
+        <ul class="clearfix row">
+          <li class="col-sm">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news1.jpg"   alt="">
             <p class="news-context right">
               5月1日起，我市在中心城区全面推广第四代智能化停车管理，通过统一的智能停车收费管理，杜绝了部分人因吃惯“免费的午餐”而将公共停车资源据为己有的陋习，盘活现有的停车资源，提高车位的使用率，道路通行和停车秩序得到明显改善。
             </p>
 
           </li>
-          <li>
+          <li class="col-sm">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news4.jpg"  alt="">
            <p class="news-context right">
              停车位智能收费管理近3个月以来，停车秩序大有改观，道路车辆违停率明显降低，城区公共停车场的泊位使用率由原来的不足10%提升到现在的80%，城区道路通行能力逐步提高。
            </p>
           </li>
-          <li>
+          <li class="col-sm">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news6.jpg" alt="">
             <p class="news-context right">
               为了保证高考期间，考点附近道路畅通，考生顺利出行，7月7日至8日，市国投易泊公司在市区莆田一中、莆田二中、莆田三中、莆田四中、哲理中学5个考场附近设立468个爱心助考道路停车泊位，为送考车辆提供免费停车服务，为考生们保驾护航。            </p>
@@ -28,7 +30,7 @@
 
         </ul>
       </div>
-
+      </div>
     </div>
 </template>
 
@@ -59,7 +61,6 @@
 
   ul {
     width: 1200px;
-
     margin: 0 auto;
   }
 

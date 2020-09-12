@@ -8,20 +8,20 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-md-4 col-sm-6">
+            <div class=" col-md-4 col-sm-6">
               <div class="box">
-                <img v-lazy="pt"  style="height: 200px">
+                <img v-lazy="pt" >
                 <div class="box-content">
                   <h3 class="title">莆田</h3>
                   <span class="post">项目已经落地</span>
                 </div>
                 <ul class="icon">
-                  <li><router-link to="/putian">更多</router-link><i class="fa fa-search"></i></li>
-<!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+                  <li><router-link to="#">更多</router-link><i class="fa fa-search"></i></a></li>
+                  <!--                  <li><a href="#"><i class="fa fa-link"></i></a></li>-->
                 </ul>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class=" col-md-4 col-sm-6">
               <div class="box">
                 <img v-lazy="bj" >
                 <div class="box-content">
@@ -34,7 +34,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class=" col-md-4 col-sm-6">
               <div class="box">
                 <img v-lazy="hk" >
                 <div class="box-content">
@@ -48,7 +48,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class=" col-md-4 col-sm-6">
               <div class="box">
                 <img v-lazy="heb" >
                 <div class="box-content">
@@ -62,7 +62,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class=" col-md-4 col-sm-6">
               <div class="box">
                 <img v-lazy="wz" >
                 <div class="box-content">
@@ -104,7 +104,7 @@ export default {
     data() {
         return {
 
-          pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/putian.jpg",
+          pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/putian.jpg",
           bj:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/beijing.jpg',
           heb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/haerbing.jpg',
           wz:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/wuzhou.jpg',

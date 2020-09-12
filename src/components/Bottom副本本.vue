@@ -3,11 +3,11 @@
 <div class="bottom-all ">
 
 <div class="b-center ">
-<div class="bottom-h af">
+<div class="bottom-h af  ">
   <p class="b-title af">联系我们</p>
   <p class="b-englist  af">Contact Us</p>
 </div>
-<div class="bottom-c">
+<div class="bottom-c  ">
   <div class="c-left  af">
   <a href="#" class="c-logo"><img style="width: 120px;height: 60px" src="../assets/logo.png" alt=""></a>
   <span>普行智能停车（深圳）有限公司</span>
@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<div class="bottom-b af">
+<div class="bottom-b af col-md-4 col-sm-6">
   <span class="center">©2017-2020普行智能停车<a href="#" target="_blank"> 闽ICP备8888888888号</a></span>
 </div>
 </div>
@@ -107,6 +107,7 @@
 </script>
 
 <style>
+
   body{
     text-align: center;
   }

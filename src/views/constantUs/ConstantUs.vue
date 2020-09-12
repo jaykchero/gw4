@@ -63,7 +63,7 @@
 
 <script>
 
-  import Bottom from "../../components/Bottom";
+  import Bottom from "../../components/Bottom.vue";
 
 
     export default {
