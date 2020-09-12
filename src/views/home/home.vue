@@ -5,7 +5,7 @@
         <SwiperIndex ></SwiperIndex>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
-      <div class="ani " swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+      <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
         <div class="page1">
           <p class="p">项目经验</p>
           <p class="pp">鼠标选中查看详情</p>
@@ -20,11 +20,6 @@
          <Bottom style="margin-top:10px;height: 40%"></Bottom>
      </div>
 
-        <!-- <my-adv-->
-        <!--              is-to-left=true-->
-          <!--              :title1=" adv2.title1" :info="adv2.info" :title2="adv2.title2"-->
-          <!--          :list="adv2.list" :img="adv2.img">-->
-          <!--          </my-adv>-->
 
       </swiper-slide>
     </swiper>
@@ -152,18 +147,20 @@ export default {
     overflow: hidden;
   }
   .slide-two{
-     width:100%;  height: 100%; background:url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices.jpg) no-repeat center; background-size:cover;
+    padding: 60px;
+     width:100%;  height: 700px; background:url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choices.jpg) no-repeat center; background-size:cover;
   }
 
 
 
   .p {
-     font-size: 30px;
+    margin-top: 20px;
+     font-size: 20px;
      font-weight: 400;
      color: #ffffff;
    }
   .pp {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     color: #ffffff;
   }

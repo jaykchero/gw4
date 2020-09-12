@@ -47,7 +47,7 @@
               </div>
             </div>
 
-            <div class=" col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <div class="box">
                 <img v-lazy="heb" >
                 <div class="box-content">
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-  
+
   .container{
     margin-top: 20px;
   }
