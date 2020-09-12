@@ -5,7 +5,7 @@
     <div class="row b-header">
       <div class="col-md-4 col-sm-6">
         <p class="b-title af">联系我们</p>
-        <p class="b-englist  af">Contact Us</p>
+        <p class="b-englist  af" style="line-height: 0px">Contact Us</p>
       </div>
       <div class="col-md-4 col-sm-6">
         <div >
@@ -171,7 +171,13 @@
     margin-left: 30px;
   }
   .b-content{
-
     color: #f3f3f3;
+  }
+  p{
+    line-height: 20px;
+
+  }
+  .center{
+    line-height: 58px;
   }
 </style>
