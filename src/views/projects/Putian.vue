@@ -4,7 +4,7 @@
         <img v-lazy="hb">
       </div>
       <div >
-        <h1 style="color:white;">莆田市停车分布</h1>
+        <h1 style="color:white;font-size: 40px">莆田市停车分布</h1>
       </div>
 
       <div class="parkingDistribution">
@@ -139,9 +139,9 @@
 
   .parkingDistribution{
     width: 100%;
-    height: 400px;
-    overflow: hidden;
-   /*// background: #38ef7d;*/
+    height: 600px;
+
+
   }
   .p{
     line-height: 30px;

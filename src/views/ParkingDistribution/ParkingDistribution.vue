@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all-pdb">
     <div id="test-map" />
     <div class="map-list">
       <h3 class="index-map-title">
@@ -341,6 +341,8 @@
 
 <style>
 
+
+
   .ant-list-item-meta:hover
   {
     background-color: #eeeeee !important;
@@ -366,6 +368,10 @@
 </style>
 
 <style scoped>
+  .all-pdb{
+    position: relative;
+  }
+
   .item-text{
   color: #1e7e34;
   }
@@ -395,7 +401,7 @@
 
   .map-list {
     position: absolute;
-    top: 80px;
+    top: 20px;
     left: 10px;
     width: 272px;
     height: 500px;

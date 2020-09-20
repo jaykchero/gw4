@@ -110,7 +110,7 @@
 
    <a-sub-menu>
         <span slot="title" class="submenu-title-wrapper" @click="dhcli"
-        > <router-link to="/parkingDistribution">联系我们</router-link></span>
+        > <router-link to="/constantUs">联系我们</router-link></span>
    </a-sub-menu>
 
     </a-menu>

@@ -11,7 +11,6 @@
           <p class="pp">鼠标选中查看详情</p>
         </div>
         <Protecteds></Protecteds>
-
       </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
@@ -36,6 +35,7 @@
   import Protecteds from '../about/componets/ProjectExperience'
   import News from "./componets/News";
   import Bottom from "../../components/Bottom";
+  import ParkingDistribution from '../ParkingDistribution/ParkingDistribution'
 
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
@@ -49,7 +49,8 @@ export default {
     swiperSlide,
     //myAdv,
     News,
-    Bottom
+    Bottom,
+    ParkingDistribution
 
 
   },
@@ -173,7 +174,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-
 
 
   .slogan {

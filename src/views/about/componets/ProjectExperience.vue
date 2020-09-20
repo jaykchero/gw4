@@ -221,21 +221,22 @@ export default {
   }
   .box .icon li{ display: inline-block; }
   .box .icon li a{
-    color: #fff;
+    color: #0b0306 !important;
     background: rgba(255,255,255,0.2);
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     line-height: 40px;
     height: 40px;
-    width: 40px;
+    width: 60px;
     margin: 0 3px;
     display: block;
     position: relative;
     transition: all 0.3s;
   }
   .box .icon li a:hover{
-    text-shadow: 0 0 6px #555;
-    box-shadow: 0 0 5px #555;
+    color: #202830 !important;
+    text-shadow: 0 0 6px #ffab44;
+    box-shadow: 0 0 5px #ffab44;
   }
   @media only screen and (max-width:990px){
     .box{ margin-bottom: 30px; }
