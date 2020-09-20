@@ -17,7 +17,7 @@
 
             <a-list-item-meta :description="item.address">
 
-              <a slot="title" > <img style="margin-right: 5px" src="../../assets/img/iconStop.png" alt="">{{ item.parkName }}
+              <a slot="title" > <img style="margin-right: 5px" :src="iconImg" alt="">{{ item.parkName }}
                 <br><span class="item-text"> 总车位(个)：  {{item.sumTruckSpace}}</span>
                 <br>
                 <span class="item-text2"> 剩余车位(个)： {{item.leisureTruckSpace}}</span>
@@ -40,10 +40,14 @@
   import greenStop from '../../assets/img/green.png'
   import redStop from '../../assets/img/red.png'
   import yellowStop from '../../assets/img/yello.png'
+  import iconImg_off from '../../assets/img/iconStop.png'
+  import iconImg_on from '../../assets/img/data_image_on.png'
 
   export default {
     data() {
       return {
+
+        iconImg:iconImg_on,
         timer:'',
         allListData:[],
         allListDatas:[
@@ -323,12 +327,12 @@
          this.infowindow1.open(this.map,[record.data.coordinateX,record.data.coordinateY])  //allBerth:14,
       },
       toShow(item){
-          console.log(item)
+
           this.record.data=item;
         this.map.setCenter([item.coordinateX,item.coordinateY])
         this.map.setZoom(20);
          this.infotext(1,this.record)
-        // console.log(this.record)
+
       }
     }
   }
