@@ -37,6 +37,10 @@
 
 <script>
   import { lazyAMapApiLoaderInstance } from 'vue-amap'
+  import greenStop from '../../assets/img/green.png'
+  import redStop from '../../assets/img/red.png'
+  import yellowStop from '../../assets/img/yello.png'
+
   export default {
     data() {
       return {
@@ -175,10 +179,10 @@
                   // 这里会遍历每个数据
                   // 根据每个数据的参数进行分组
                   // 下面的判断是根据参数的下标进行分组
-                  if (item.leisureTruckSpace>10) {
-                    return 'g1'
-                  } else if(item.leisureTruckSpace>0 && item.leisureTruckSpace<10){
+                  if (item.leisureTruckSpace>=10) {
                     return 'g2'
+                  } else if(item.leisureTruckSpace>0 && item.leisureTruckSpace<10){
+                    return 'g1'
                   } else if(item.leisureTruckSpace==0){
                     return 'g0'
                   }
@@ -190,84 +194,66 @@
                     //点的样式
                     pointStyle: {
                       //绘制点占据的矩形区域
-                      content: function(ctx, x, y, width, height) {
-                        //注意，这里的width和height可能不同于pointStyle里面的width/height， 高清屏幕下会存在比例缩放
-                        //这里绘制一个圆顶锥形
-                        var yPos = 1 / 3;
-                        var top = [x + width / 2, y],
-                          right = [x + width, y + height * yPos],
-                          bottom = [x + width / 2, y + height],
-                          left = [x, y + height * yPos];
-                        ctx.moveTo(left[0], left[1]);
-                        ctx.arcTo(top[0], top[1], right[0], right[1], width/2);
-                        ctx.lineTo(right[0], right[1]);
-                        ctx.lineTo(bottom[0], bottom[1]);
-                        ctx.lineTo(left[0], left[1]);
-                      },
+                      content: PointSimplifier.Render.Canvas.getImageContent(
+                        redStop,
+                        function onload() {
+                          pointSimplifierIns.renderLater();
+                        },
+                        function onerror(e) {
+                          alert('图片加载失败！');
+                        }),
                       //宽度
-                      width: 20,
+                      width: 28,
                       //高度
-                      height: 29,
+                      height: 35,
+                      //定位点为底部中心
                       offset: ['-50%', '-100%'],
-                      fillStyle: '#ff1719',
-                      lineWidth: 1,
-                      strokeStyle: 'gray'
+                      fillStyle: null,
+                      strokeStyle: null
                     },
                   },
 
                   g1: {
                     pointStyle: {
                       //绘制点占据的矩形区域
-                      content: function(ctx, x, y, width, height) {
-                        //注意，这里的width和height可能不同于pointStyle里面的width/height， 高清屏幕下会存在比例缩放
-                        //这里绘制一个圆顶锥形
-                        var yPos = 1 / 3;
-                        var top = [x + width / 2, y],
-                          right = [x + width, y + height * yPos],
-                          bottom = [x + width / 2, y + height],
-                          left = [x, y + height * yPos];
-                        ctx.moveTo(left[0], left[1]);
-                        ctx.arcTo(top[0], top[1], right[0], right[1], width / 2);
-                        ctx.lineTo(right[0], right[1]);
-                        ctx.lineTo(bottom[0], bottom[1]);
-                        ctx.lineTo(left[0], left[1]);
-                      },
+                      content: PointSimplifier.Render.Canvas.getImageContent(
+                        yellowStop,
+                        function onload() {
+                          pointSimplifierIns.renderLater();
+                        },
+                        function onerror(e) {
+                          alert('图片加载失败！');
+                        }),
                       //宽度
-                      width: 20,
+                      width: 28,
                       //高度
-                      height: 29,
+                      height: 35,
+                      //定位点为底部中心
                       offset: ['-50%', '-100%'],
-                      fillStyle: '#02b434',
-                      lineWidth: 1,
-                      strokeStyle: 'gray'
+                      fillStyle: null,
+                      strokeStyle: null
                     },
                   },
 
                   g2: {
                     pointStyle: {
                       //绘制点占据的矩形区域
-                      content: function(ctx, x, y, width, height) {
-                        //注意，这里的width和height可能不同于pointStyle里面的width/height， 高清屏幕下会存在比例缩放
-                        //这里绘制一个圆顶锥形
-                        var yPos = 1 / 3;
-                        var top = [x + width / 2, y],
-                          right = [x + width, y + height * yPos],
-                          bottom = [x + width / 2, y + height],
-                          left = [x, y + height * yPos];
-                        ctx.moveTo(left[0], left[1]);
-                        ctx.arcTo(top[0], top[1], right[0], right[1], width / 2);
-                        ctx.lineTo(right[0], right[1]);
-                        ctx.lineTo(bottom[0], bottom[1]);
-                        ctx.lineTo(left[0], left[1]);
-                      },
+                      content: PointSimplifier.Render.Canvas.getImageContent(
+                        greenStop,
+                        function onload() {
+                          pointSimplifierIns.renderLater();
+                        },
+                        function onerror(e) {
+                          alert('图片加载失败！');
+                        }),
                       //宽度
-                      width: 20,
+                      width: 28,
                       //高度
-                      height: 29,
+                      height: 35,
+                      //定位点为底部中心
                       offset: ['-50%', '-100%'],
-                      fillStyle: '#ffd50f',
-                      lineWidth: 1,
-                      strokeStyle: 'gray'
+                      fillStyle: null,
+                      strokeStyle: null
                     },
                   }
                 },
