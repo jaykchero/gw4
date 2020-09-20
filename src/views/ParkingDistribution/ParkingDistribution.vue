@@ -25,11 +25,6 @@
               </a>
             </a-list-item-meta>
 
-
-
-
-
-
           </a-list-item>
           <div v-if="loading && !busy" class="demo-loading-container">
             <a-spin />
@@ -45,6 +40,7 @@
   export default {
     data() {
       return {
+        timer:'',
         allListData:[],
         allListDatas:[
           {
@@ -132,12 +128,17 @@
         offset: new AMap.Pixel(0, -30)
       });
 
-      setTimeout(this.getMap,200) ;
+     // this.getMap();
+
+     // setInterval(this.getMap,1000)
 
     },
     methods:{
 
       getMap(){
+        // if(this.data!=null){
+        //   clearInterval(this.timer);
+        // }
         lazyAMapApiLoaderInstance.load().then(() => {
           this.map = new AMap.Map('test-map', {
             zooms: [3, 18], // 地图缩放范围
@@ -161,7 +162,7 @@
               },
 
               getHoverTitle: function(dataItem, idx) {
-                // return '你好我是第'+idx+"个停车点"
+                 return dataItem.parkName;
               },
               renderConstructor: PointSimplifier.Render.Canvas.GroupStyleRender,
               renderOptions: {
@@ -308,7 +309,8 @@
             console.log("res",res)
             this.allListData=res.data.data
             this.data=this.allListData;
-            console.log("this.allListData",this.allListData)
+            this.getMap()
+           // console.log("this.allListData",this.allListData)
           })
 
 
