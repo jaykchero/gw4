@@ -3,7 +3,7 @@ import qs from 'qs'
 
 
 //设置公共请求地址
-axios.defaults.baseURL='http://qexz4xnye.hn-bkt.clouddn.com/';
+axios.defaults.baseURL='https://customer.ptyibo.com/api/';
 axios.defaults.timeout=5000;
 
  //设置请求请求头
@@ -32,7 +32,7 @@ axios.defaults.timeout=5000;
    // 添加响应拦截器
    axios.interceptors.response.use(function (response) {
 
-      
+
 
  	console.log(response)
        return response;

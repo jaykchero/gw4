@@ -57,6 +57,14 @@ const routes = [
     component: () => import( '../views/constantUs/ConstantUs')
   },
 
+  {
+    path:'/parkingDistribution',
+    name: 'ParkingDistribution',
+    component: () => import( '../views/ParkingDistribution/ParkingDistribution')
+  },
+
+
+
 
 
 ]

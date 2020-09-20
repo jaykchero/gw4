@@ -3,35 +3,13 @@
       <div class="h-b">
         <img v-lazy="hb">
       </div>
+      <div >
+        <h1 style="color:white;">莆田市停车分布</h1>
+      </div>
 
-      <div class="Choices">
-        <div class="Choices_text">
-          <div class="Choices_head animated backInDown">莆田</div>
-          <div class="Choices_content">
-            <div class="Choicesnext"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/Choicesnext.png" width="100%"></div>
-            <div class="Choices_banner">
-              <ul>
-                <li>
-                  <div class="Choices_left"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%AF%86%E5%88%AB/putian.jpg" width="100%"></div>
-                  <div class="Choices_right">
-                    <h1>普行智能停车（深圳）有限公司莆田分公司</h1>
-                    <h2></h2>
-                    <p style="line-height: 20px">普行智能停车(深圳)有限公司莆田分公司成立于2020年04月02日，注册地位于福建省莆田市城厢区凤凰山街道龙平街67号</p>
-                    <div class="Choicesbut"><a href="https://aiqicha.baidu.com/company_detail_30684142241006?rq=ef&pd=ee&from=ps" target="_blank">了解更多</a></div>
-                  </div>
-                </li>
+      <div class="parkingDistribution">
 
-
-              </ul>
-            </div>
-            <div class="Choicestel">
-              <ul>
-                <li><01/01></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
+        <ParkingDistribution ></ParkingDistribution>
       </div>
 
 
@@ -41,8 +19,15 @@
 <script>
   import $ from 'jquery'
 
+  import ParkingDistribution from "../ParkingDistribution/ParkingDistribution"
+
     export default {
         name: "Putian",
+
+
+      components:{
+        ParkingDistribution,
+      },
       data () {
           return {
             hb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20191008040012800.jpg',
@@ -134,15 +119,15 @@
         },
 
 
-        Choices(){
-          $(".Choices_banner ul").animate({marginLeft:"-1184px"},600, function () {
-            $(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
-            $(".Choices_banner ul").css('marginLeft','0px');
-          });
-          $(".Choicestel ul").css('marginLeft','-1184px');
-          $(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
-          $(".Choicestel ul").css({marginLeft:"0px"},600);
-        },
+        // Choices(){
+        //   $(".Choices_banner ul").animate({marginLeft:"-1184px"},600, function () {
+        //     $(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
+        //     $(".Choices_banner ul").css('marginLeft','0px');
+        //   });
+        //   $(".Choicestel ul").css('marginLeft','-1184px');
+        //   $(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
+        //   $(".Choicestel ul").css({marginLeft:"0px"},600);
+        // },
       }
     }
 
@@ -151,6 +136,13 @@
 
 <style scoped>
 
+
+  .parkingDistribution{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+   /*// background: #38ef7d;*/
+  }
   .p{
     line-height: 30px;
   }

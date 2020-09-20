@@ -125,5 +125,11 @@ open: true, //配置自动启动浏览器
                   .end();
               config.plugins.delete('prefetch')
           }
-      } }
+      } },
+  configureWebpack: {
+    externals: {
+      'AMap': 'AMap', // 高德地图配置
+    }
+
+  }
 }

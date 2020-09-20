@@ -1,15 +1,15 @@
 <template>
-<div>
-  <div class="h-b">
-    <!-- <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt=""> -->
-    <img v-lazy="hb">
-  </div>
+  <div>
+    <div class="h-b">
+      <!-- <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt=""> -->
+      <img v-lazy="hb">
+    </div>
     <div class="cs-all">
 
       <div class="cus-header">
-      <h2 class="ch-01 tl1">
-        Hi, are you ready?
-      </h2>
+        <h2 class="ch-01 tl1">
+          Hi, are you ready?
+        </h2>
         <p class="ch-02 tl1">
           准备好开始了吗？那就与我们取得联系吧
         </p>
@@ -54,11 +54,11 @@
         <div id="allmap"></div>
       </div>
     </div>
-  <div>
-    <Bottom></Bottom>
-  </div>
+    <div>
+      <Bottom></Bottom>
+    </div>
 
-</div>
+  </div>
 </template>
 
 <script>
@@ -66,85 +66,85 @@
   import Bottom from "../../components/Bottom.vue";
 
 
-    export default {
+  export default {
 
-      components:{
-        Bottom
-      },
-        name: "ConstantUs",
-      data () {
-        return {
-          hb:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/constant.jpg",
-        }
-
-      },
-      mounted(){
-        // 百度地图API功能
-        var sContent =
-          "<h4 style='margin:0 0 5px 0;padding:0.1em 0; color:#f8ab00; font-size:16px;'>普行智能停车（深圳）有限公司</h4>" +
-          "<p style='margin:0;line-height:1.5;font-size:12px;'> 广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>" +
-          "</div>";
-        var map = new BMap.Map("allmap");
-        var point = new BMap.Point(113.895594,22.605488);
-        var marker = new BMap.Marker(point);
-        var infoWindow = new BMap.InfoWindow(sContent); // 创建信息窗口对象
-        map.openInfoWindow(infoWindow,point); //开启信息窗口
-        map.centerAndZoom(point, 19);
-        map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-        map.addOverlay(marker);
-        marker.addEventListener("click", function () {
-          this.openInfoWindow(infoWindow);
-          //图片加载完毕重绘infowindow
-          document.getElementById('imgDemo').onload = function () {
-            infoWindow.redraw(); //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
-          }
-        });
-
-        this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
-        this.fadeInElements1 = Array.from(document.getElementsByClassName('tl2'))
-
-        // 监听鼠标滚动事件
-        document.addEventListener('scroll', this.handleScroll)
-        document.addEventListener('scroll', this.handleScroll1)
-      },
-
-      methods:{
-        handleScroll1(evt){
-          for (var i = 0; i < this.fadeInElements1.length; i++) {
-            var elem = this.fadeInElements1[i]
-            var cN=elem.className
-            if (this.isElemVisible(elem)) {
-              elem.className=cN+" "+"animated slideInLeft"
-              console.log(elem.className)
-              //this.fadeInElements1.splice(i, 1) // 只让它运行一次
-            }
-          }
-
-        },
-
-        handleScroll (evt) {
-          for (var i = 0; i < this.fadeInElements.length; i++) {
-            var elem = this.fadeInElements[i]
-            var cN=elem.className
-            if (this.isElemVisible(elem)) {
-              elem.className=cN+" "+"animated slideInUp"
-              console.log(elem.className)
-              this.fadeInElements.splice(i, 1) // 只让它运行一次
-            }
-          }
-        },
-        // 判断元素距离窗口的位置
-        isElemVisible (el) {
-          var rect = el.getBoundingClientRect()
-          var elemTop = rect.top
-          console.log("et"+elemTop)
-          var elemBottom = rect.bottom
-          console.log("eb"+elemBottom)
-          return elemTop < window.innerHeight && elemBottom >= 0
-        }
+    components:{
+      Bottom
+    },
+    name: "ConstantUs",
+    data () {
+      return {
+        hb:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/test/constant.jpg",
       }
 
+    },
+    mounted(){
+      // 百度地图API功能
+      var sContent =
+        "<h4 style='margin:0 0 5px 0;padding:0.1em 0; color:#f8ab00; font-size:16px;'>普行智能停车（深圳）有限公司</h4>" +
+        "<p style='margin:0;line-height:1.5;font-size:12px;'> 广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>" +
+        "</div>";
+      var map = new BMap.Map("allmap");
+      var point = new BMap.Point(113.895594,22.605488);
+      var marker = new BMap.Marker(point);
+      var infoWindow = new BMap.InfoWindow(sContent); // 创建信息窗口对象
+      map.openInfoWindow(infoWindow,point); //开启信息窗口
+      map.centerAndZoom(point, 19);
+      map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+      map.addOverlay(marker);
+      marker.addEventListener("click", function () {
+        this.openInfoWindow(infoWindow);
+        //图片加载完毕重绘infowindow
+        document.getElementById('imgDemo').onload = function () {
+          infoWindow.redraw(); //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+        }
+      });
+
+      this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
+      this.fadeInElements1 = Array.from(document.getElementsByClassName('tl2'))
+
+      // 监听鼠标滚动事件
+      document.addEventListener('scroll', this.handleScroll)
+      document.addEventListener('scroll', this.handleScroll1)
+    },
+
+    methods:{
+      handleScroll1(evt){
+        for (var i = 0; i < this.fadeInElements1.length; i++) {
+          var elem = this.fadeInElements1[i]
+          var cN=elem.className
+          if (this.isElemVisible(elem)) {
+            elem.className=cN+" "+"animated slideInLeft"
+            console.log(elem.className)
+            //this.fadeInElements1.splice(i, 1) // 只让它运行一次
+          }
+        }
+
+      },
+
+      handleScroll (evt) {
+        for (var i = 0; i < this.fadeInElements.length; i++) {
+          var elem = this.fadeInElements[i]
+          var cN=elem.className
+          if (this.isElemVisible(elem)) {
+            elem.className=cN+" "+"animated slideInUp"
+            console.log(elem.className)
+            this.fadeInElements.splice(i, 1) // 只让它运行一次
+          }
+        }
+      },
+      // 判断元素距离窗口的位置
+      isElemVisible (el) {
+        var rect = el.getBoundingClientRect()
+        var elemTop = rect.top
+        console.log("et"+elemTop)
+        var elemBottom = rect.bottom
+        console.log("eb"+elemBottom)
+        return elemTop < window.innerHeight && elemBottom >= 0
+      }
     }
+
+  }
 </script>
 
 <style scoped>

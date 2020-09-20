@@ -7,14 +7,15 @@ import '@/assets/css/animate.min.css'
 Vue.config.productionTip = false
 import {goAnchor,GetQueryString} from './assets/js/common.js';
 //import Antd from 'ant-design-vue'
-import { Menu,Table,Divider,Icon } from 'ant-design-vue';
+import { Menu,Table,Divider,Icon,List } from 'ant-design-vue';
 Vue.use(Menu);
 Vue.use(Table);
 Vue.use(Divider);
 Vue.use(Icon);
+Vue.use(List)
 
-// import ajax from './api'
-// Vue.prototype.$http =ajax;
+import ajax from './api'
+Vue.prototype.$http =ajax;
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
@@ -37,6 +38,18 @@ Vue.use(VueLazyload, {
   attempt: 2
 });
 
+// 引入vue-amap
+import VueAMap from 'vue-amap';
+Vue.use(VueAMap);
+// 初始化vue-amap
+VueAMap.initAMapApiLoader({
+  // 高德的key
+  key: '6cb76a4458afbbd618a913d36a9d1d88',
+  // 插件集合
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  // 高德 sdk 版本，默认为 1.4.4
+  v: '1.4.4'
+});
 
 new Vue({
   router,

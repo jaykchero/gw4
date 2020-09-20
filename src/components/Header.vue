@@ -88,6 +88,10 @@
         <span slot="title" class="submenu-title-wrapper" @click="dhcli"
           > <router-link to="/puxingSmartParking">普行停车</router-link></span>
         <a-menu-item-group >
+
+
+
+
            <a-menu-item key="setting:1">
              <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a>
            </a-menu-item>
@@ -106,7 +110,7 @@
 
    <a-sub-menu>
         <span slot="title" class="submenu-title-wrapper" @click="dhcli"
-        > <router-link to="/constantUs">联系我们</router-link></span>
+        > <router-link to="/parkingDistribution">联系我们</router-link></span>
    </a-sub-menu>
 
     </a-menu>
