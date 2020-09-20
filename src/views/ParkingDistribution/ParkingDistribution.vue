@@ -147,7 +147,8 @@
         lazyAMapApiLoaderInstance.load().then(() => {
           this.map = new AMap.Map('test-map', {
             zooms: [3, 18], // 地图缩放范围
-            center: new AMap.LngLat(116.397428, 39.90923)
+            center: new AMap.LngLat(116.397428, 39.90923),
+
           })
 
           // 加载海量点组件
@@ -158,6 +159,7 @@
             }
             // 创建组件实例
             var pointSimplifier = new PointSimplifier({
+              zIndex:300,
               map: this.map,
               // data是海量点的坐标，下面是随机产生点坐标的方法
               data:this.allListData,
@@ -171,9 +173,7 @@
               },
               renderConstructor: PointSimplifier.Render.Canvas.GroupStyleRender,
               renderOptions: {
-                pointStyle: {
-                  fillStyle: 'red'
-                },
+
                 //将经纬度进行分组
                 getGroupId: function(item, idx) {
                   // 分组规则
@@ -187,6 +187,14 @@
                   } else if(item.leisureTruckSpace==0){
                     return 'g0'
                   }
+                },
+
+                pointHoverStyle:{
+                  width: 31,
+                  height: 31,
+                  content: 'circle',
+                  strokeStyle:"#477e9a",
+                  lineWidth:3
                 },
                 // 为每组添加样式（两种方法）
                 // 方法一
@@ -204,11 +212,11 @@
                           alert('图片加载失败！');
                         }),
                       //宽度
-                      width: 28,
+                      width: 30,
                       //高度
-                      height: 35,
+                      height: 30,
                       //定位点为底部中心
-                      offset: ['-50%', '-100%'],
+                      // offset: ['-50%', '-100%'],
                       fillStyle: null,
                       strokeStyle: null
                     },
@@ -226,11 +234,11 @@
                           alert('图片加载失败！');
                         }),
                       //宽度
-                      width: 28,
+                      width: 30,
                       //高度
-                      height: 35,
+                      height: 30,
                       //定位点为底部中心
-                      offset: ['-50%', '-100%'],
+                    //  offset: ['-50%', '-100%'],
                       fillStyle: null,
                       strokeStyle: null
                     },
@@ -248,11 +256,11 @@
                           alert('图片加载失败！');
                         }),
                       //宽度
-                      width: 28,
+                      width: 30,
                       //高度
-                      height: 35,
+                      height: 30,
                       //定位点为底部中心
-                      offset: ['-50%', '-100%'],
+                    //  offset: ['-50%', '-100%'],
                       fillStyle: null,
                       strokeStyle: null
                     },
