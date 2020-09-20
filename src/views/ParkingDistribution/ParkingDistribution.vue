@@ -135,6 +135,7 @@
      // this.getMap();
 
      // setInterval(this.getMap,1000)
+      setTimeout(this.getMap,1000)
 
     },
     methods:{
@@ -197,7 +198,7 @@
                       content: PointSimplifier.Render.Canvas.getImageContent(
                         redStop,
                         function onload() {
-                          pointSimplifierIns.renderLater();
+                          pointSimplifier.renderLater();
                         },
                         function onerror(e) {
                           alert('图片加载失败！');
@@ -219,7 +220,7 @@
                       content: PointSimplifier.Render.Canvas.getImageContent(
                         yellowStop,
                         function onload() {
-                          pointSimplifierIns.renderLater();
+                          pointSimplifier.renderLater();
                         },
                         function onerror(e) {
                           alert('图片加载失败！');
@@ -241,7 +242,7 @@
                       content: PointSimplifier.Render.Canvas.getImageContent(
                         greenStop,
                         function onload() {
-                          pointSimplifierIns.renderLater();
+                          pointSimplifier.renderLater();
                         },
                         function onerror(e) {
                           alert('图片加载失败！');
