@@ -15,7 +15,7 @@
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-         <News style="height: 70%;margin-bottom: 50px"></News>
+         <News style="height: 60%;margin-bottom: 50px"></News>
          <Bottom style="height: 40%"></Bottom>
      </div>
 
@@ -47,7 +47,7 @@ export default {
     SwiperIndex,
     swiper,
     swiperSlide,
-    //myAdv,
+
     News,
     Bottom,
 
@@ -102,14 +102,6 @@ export default {
 <style lang="scss" scoped>
 
 
-
-
-  .page1 {
-    margin-top: -30px;
-    text-align: center;
-    height: 100px;
-    overflow: hidden;
-  }
 
   .slide-three {
     height: 1080px !important;

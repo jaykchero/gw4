@@ -40,6 +40,8 @@
 
 <style scoped>
 
+
+
   .news-context{
     font-size: 14px;
     color: #202830;
@@ -69,7 +71,7 @@
     width: 350px;
     padding: 20px;
     list-style: none;
-    height: 500px;
+    height: 480px;
     border: 1px solid rgba(223,231,239, .7);
     color: rgb(32,40,48);
     text-shadow: 0 1px 1px rgb(255,255,255);
@@ -92,11 +94,10 @@
 
   ul li h4 {
     height: 40px;
-    margin-bottom: 15px;
     line-height: 40px;
     font-size: 16px;
     text-align: center;
-    border-bottom: 1px solid rgba(223,231,239, .7);
+    border-bottom: 1px solid rgba(105, 105, 105, 0.7);
   }
 
   ul li p {
@@ -108,8 +109,8 @@
   .page1 {
 
     text-align: center;
-    height: 100px;
-    overflow: hidden;
+    height: 80px;
+
   }
   .h3,
   .p {
