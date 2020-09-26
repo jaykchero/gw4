@@ -68,7 +68,7 @@
     margin-left: 30px;
     font-family: 'Nunito', sans-serif;
     background: -webkit-linear-gradient(right, #ffffff, #2475a6);
-    background: linear-gradient(right, white,  #2475a6);
+    background: linear-gradient(to left, white, white);
     float: left;
     width: 350px;
     padding: 20px;
