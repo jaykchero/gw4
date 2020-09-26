@@ -15,7 +15,7 @@
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-         <News style="height: 60%;margin-bottom: 50px"></News>
+         <News style="height: 65%;margin-bottom: 50px"></News>
          <Bottom style="height: 40%"></Bottom>
      </div>
 

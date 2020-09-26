@@ -141,10 +141,10 @@
 
   ul li {
 
-    transition: all .5s ease;
+      transition: all .5s ease;
 
 
-     }
+    }
 
   ul li:hover{
 

@@ -148,11 +148,10 @@
 <style scoped="scoped">
 
 
+
     .cl{
       float: left;
       width: 220px;
-
-
     }
 
     .cl svg{
@@ -164,16 +163,6 @@
       /*margin-left: 160px;*/
       margin-top: 30px;
     }
-      .lii{
-          transition: all .5s ease;
-      }
-
-      .lii:hover{
-        -webkit-transform: scale(1.1);
-      	  -moz-transform: scale(1.1);
-      			transform: scale(1.1);
-      }
-
 
       .b-img img {
 
@@ -188,6 +177,7 @@
          top: 20px;
       }
 
+
     .ps-center{
       margin: 0 auto;
       margin-bottom: 100px;
@@ -198,7 +188,7 @@
       height: 640px;
       list-style: none;
       border: 1px solid rgba(223,231,239, .7);
-      transition: all .2s ease;
+      transition: all 1s ease;
 
     }
 
@@ -208,23 +198,25 @@
 
      }
 
-
-
       .sp-c-top img{
-
         width: 230px;
         height: 230px;
-
         font-family: 'Nunito', sans-serif;
         background: linear-gradient(to left, #19bcb8, #1da1bc);
         padding: 5px;
-
         list-style: none;
         border: 1px solid rgba(223,231,239, .7);
-
+        transition: all 3s ease;
       }
 
-
+    /*.lii{*/
+    /*  transition: all 3s ease;*/
+    /*}*/
+    /*.lii:hover{*/
+    /*  -webkit-transform: scale(1.1);*/
+    /*  -moz-transform: scale(1.1);*/
+    /*  transform: scale(1.1);*/
+    /*}*/
 
 
 
