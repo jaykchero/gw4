@@ -138,7 +138,7 @@
 
   img{
     width: 400px;
-    height: 597px;
+    height: 497px;
 
   }
 

@@ -30,31 +30,6 @@
 
      },
 
-
-
-     // date(){
-     //   return {
-     //     currentClass:"fadeInDown animated",
-     //   }
-
-     // },
-
-     // watch:{
-     //   "$route":function(to,from){
-     //     var toLength = to.path.split("/").length;
-     //     var fromLength = from.path.split("/").length;
-     //      console.log(toLength,to);
-     //       console.log(fromLength,from);
-     //     if(toLength>fromLength){
-     //        this.currentClass="fadeInLeft animated";
-     //     }else if(toLength<fromLength){
-     //        this.currentClass="fadeInRight animated";
-     //     }
-
-     //   }
-
-     // }
-
   }
 
 </script>
@@ -63,9 +38,9 @@
 
 <style lang="less">
   .header{
-   // background-color: #eee;
-    height: 65px;
-   // margin-bottom: 5px;
+
+    height: 76px;
+
   }
   .lines{
     height: 1.5px;

@@ -89,9 +89,6 @@
           > <router-link to="/puxingSmartParking">普行停车</router-link></span>
         <a-menu-item-group >
 
-
-
-
            <a-menu-item key="setting:1">
              <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a>
            </a-menu-item>
@@ -186,11 +183,8 @@
                         this.timer3 = setTimeout(()=>{   //设置延迟执行
 
                         var currentTop  = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-                       // console.log('currentTop===='+currentTop)
                         if( currentTop > 72){
-                              // clearTimeout(this.timer2);  //清除延迟执行
 
-                               // this.timer2 = setTimeout(()=>{   //设置延迟执行
                                     this.isScroll=1;
                               //  },10);
 
@@ -238,6 +232,8 @@
 
 <style>
 
+
+
   .logo{
 
     display: inline-block;
@@ -256,11 +252,10 @@
   color: #0080FF !important;
 }
 
-.ant-menu-submenu-open , .ant-menu-submenu-active,.ant-menu-submenu-selected {border-bottom: 0px !important; }
-
 .header-menu{
-  background-color: #eee !important;
+  background-color: snow !important;
 }
+
 
 
 .header-fixd{
@@ -268,8 +263,8 @@
     height: 65px;
     position:fixed !important;
     top:0px;
-  left: 0px;
-    background-color: #eee ;
+    left: 0px;
+    background-color: snow;
     z-index: 10;
     margin-bottom: 150px;
   }
@@ -312,25 +307,30 @@
      color: #4e4e4e !important;
   }
 
+  .ant-menu-submenu-open , .ant-menu-submenu-active,.ant-menu-submenu-selected{
+     border-bottom: 0px !important;
+     background: #eee;
 
+   }
 
- .submenu-title-wrapper .active{
-  font-size: 20px;
-  color: #477e9a!important;
- /* border-bottom: 0.5px solid #477e9a; */
-  display: block;
-  line-height: 46px;
-   width: 80px !important;
-
-
+ .submenu-title-wrapper a:hover{
+  /*border-bottom: 2px solid #477e9a;*/
+   color: snow;
   }
 
 
-  .submenu-title-wrapper{
+  .submenu-title-wrapper a{
       color:  #4e4e4e;
+    font-size: 15px;
+    display: block;
+    height: 50px;
+    width: 70px;
+  }
+  .submenu-title-wrapper .active{
+    color: #477e9a!important;
+    height: 50px;
 
   }
-
   .ant-menu-horizontal.active{
       color: #1073d8
 

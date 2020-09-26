@@ -9,8 +9,8 @@
       </div>
       <div class="col-md-4 col-sm-6">
         <div >
-          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png" alt="">
-          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png" alt="">
+          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg" alt="">
+          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xiaochengxu.png" alt="">
         </div>
       </div>
 
@@ -60,8 +60,8 @@
     date () {
       return {
         left:[],
-        officialAccount:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png',
-        xcx:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png'
+        officialAccount:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg',
+        xcx:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xiaochengxu.png'
       }
 
     },

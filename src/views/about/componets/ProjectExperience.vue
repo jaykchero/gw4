@@ -118,6 +118,10 @@ export default {
 
 <style scoped lang="less">
 
+  .title{
+    color: #ffffff;
+  }
+
   .container{
     margin-top: 20px;
   }
@@ -180,10 +184,10 @@ export default {
     color: #fff;
     text-align: center;
     width: 100%;
-    opacity: 0;
-    transform: translateX(-50%) translateY(-50%) scale(3);
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     z-index: 1;
     transition: all 0.5s ease;

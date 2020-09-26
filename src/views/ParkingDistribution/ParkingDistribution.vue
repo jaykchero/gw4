@@ -32,18 +32,25 @@
         </a-list>
       </div>
     </div>
+    <Bottom></Bottom>
+
   </div>
 </template>
 
 <script>
+  import Bottom from "../../components/Bottom";
   import { lazyAMapApiLoaderInstance } from 'vue-amap'
   import greenStop from '../../assets/img/green.png'
   import redStop from '../../assets/img/red.png'
   import yellowStop from '../../assets/img/yello.png'
-  import iconImg_off from '../../assets/img/iconStop.png'
+  //
+  // import iconImg_off from '../../assets/img/iconStop.png'
   import iconImg_on from '../../assets/img/data_image_on.png'
 
   export default {
+    components:{
+      Bottom
+    },
     data() {
       return {
 
@@ -314,7 +321,6 @@
 
 
 
-
       },
 
       infotext(e, record){
@@ -339,9 +345,6 @@
 </script>
 
 <style>
-
-
-
   .ant-list-item-meta:hover
   {
     background-color: #eeeeee !important;

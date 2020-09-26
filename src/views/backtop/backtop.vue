@@ -35,7 +35,7 @@
  		<div class="d d-qrcode">
  			<i class="arrow"></i>
  			<div class="inner-box">
- 				<div class="qrcode-img"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png" style="	height: 180px; width: 180px;" alt=""></div>
+ 				<div class="qrcode-img"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg" style="	height: 180px; width: 180px;" alt=""></div>
  				<p>微信公众号</p>
  			</div>
  		</div>
