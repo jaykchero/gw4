@@ -15,8 +15,8 @@
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-         <News style="height: 70%;"></News>
-         <Bottom style="margin-top:10px;height: 40%"></Bottom>
+         <News style="height: 70%;margin-bottom: 50px"></News>
+         <Bottom style="height: 40%"></Bottom>
      </div>
 
 
@@ -50,31 +50,10 @@ export default {
     //myAdv,
     News,
     Bottom,
-    ParkingDistribution
-
 
   },
   data() {
     return {
-
-      // adv1: {
-      //   title1: '关注微信公众号小程序',
-      //   info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
-      //   title2: '优势特点',
-      //   img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
-      //   list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
-      //
-      // },
-      //
-      // adv2: {
-      //   title1: '关注微信公众号小程序',
-      //   info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
-      //   title2: '优势特点',
-      //   img: 'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
-      //   list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
-      //
-      // },
-
       loading: true,
       caseList: [],
       newsList: [],
@@ -111,7 +90,6 @@ export default {
     };
   },
 
-  // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
   computed: {
     swiper() {
       return this.$refs.mySwiper.swiper;
@@ -137,8 +115,6 @@ export default {
     height: 1080px !important;
     background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/news.jpg) no-repeat center;
     background-size: cover;
-    overflow: hidden;
-
   }
 
 

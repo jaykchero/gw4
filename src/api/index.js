@@ -15,12 +15,10 @@ axios.defaults.timeout=5000;
  // 添加请求拦截器
  axios.interceptors.request.use(function (config) {
 
-
-
     if(config.method.toLowerCase() == "post"){
-		console.log('转化中')
+
  	   config.data = qs.stringify(config.data)
-	   console.log(config.data)
+
     }
     return config;
    }, function (error) {
@@ -31,10 +29,7 @@ axios.defaults.timeout=5000;
 
    // 添加响应拦截器
    axios.interceptors.response.use(function (response) {
-
-
-
- 	console.log(response)
+     
        return response;
      }, function (error) {
        // 对响应错误做点什么

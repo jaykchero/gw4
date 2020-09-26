@@ -43,8 +43,7 @@
   import greenStop from '../../assets/img/green.png'
   import redStop from '../../assets/img/red.png'
   import yellowStop from '../../assets/img/yello.png'
-  //
-  // import iconImg_off from '../../assets/img/iconStop.png'
+
   import iconImg_on from '../../assets/img/data_image_on.png'
 
   export default {
@@ -77,64 +76,14 @@
         infowindow1:'',
         record:{},
         lnglat:[116.473188, 39.993253],
-        datas:[
-          {
-            id:1,
-            position: [119.018265,25.419625],
-            title:'澄湖小区',
-            info:"地址：八二一南街1255号",
-            allBerth:14,
-            surplusBerth:3
-          },
-          {
-            id:2,
-            position: [119.030761,25.424091],
-            title:'荔园东路三57-86',
-            info:"地址：福建省莆田市城厢区荔园东路下黄小区",
-            allBerth:30,
-            surplusBerth:12
-          },
-          {
-            id:3,
-            position: [119.026295,25.423237],
-            title:'荔园东路四87-110',
-            info:"地址：荔园东路1688号",
-            allBerth:24,
-            surplusBerth:7
-          },
-          {
-            id:4,
-            position: [119.018265,25.419625],
-            title:'荔园东路五111-137',
-            info:"地址：八二一南街1255号",
-            allBerth:14,
-            surplusBerth:0
-          },
-          {
-            id:5,
-            position: [119.031941,25.424299],
-            title:'荔园东路二29-56',
-            info:"地址：福建省莆田市城厢区荔园东路下黄小区",
-            allBerth:28,
-            surplusBerth:11
-          },
-          {
-            id:6,
-            position: [119.031084,25.428251],
-            title:'天妃路三63-94',
-            info:"地址：莆田市荔城区天妃路125附近",
-            allBerth:28,
-            surplusBerth:0
-          },
 
-        ]
 
       }
     },
 
     mounted() {
       this.queryAllData();
-      console.log("data:",this.data)
+
       this.infowindow1 = new AMap.AdvancedInfoWindow({
         // content: "普行智能停车",
         walking:false,
@@ -142,11 +91,6 @@
         transit:false,
         offset: new AMap.Pixel(0, -30)
       });
-
-     // this.getMap();
-
-     // setInterval(this.getMap,1000)
-      setTimeout(this.getMap,1000)
 
     },
     methods:{
@@ -277,28 +221,13 @@
                     },
                   }
                 },
-                // 方法二
-                // groupStyleOptions: function(gid) {
-                //   if (gid === 'g0') {
-                //     return {
-                //       pointStyle: {
-                //         fillStyle: 'red'
-                //       }
-                //     }
-                //   } else {
-                //     return {
-                //       pointStyle: {
-                //         fillStyle: 'blue'
-                //       }
-                //     }
-                //   }
-                // }
+
               }
             })
             // 为海量点添加点击事件
             pointSimplifier.on('pointClick', this.infotext);
             // pointSimplifier.on('pointClick', function(e, record) {
-            //   console.log(e.type, record);
+
             // });
           })
         })
@@ -310,16 +239,11 @@
           latitude:25.431011
         }
         this.$http.post('/park/getParkList',obj)
-
           .then(res =>{
-            console.log("res",res)
             this.allListData=res.data.data
             this.data=this.allListData;
             this.getMap()
-           // console.log("this.allListData",this.allListData)
           })
-
-
 
       },
 
@@ -329,7 +253,6 @@
         // info.push("<div class='input-card content-window-card'><div><img style=\"float:left;width:67px;height:16px;\" src=\" https://webapi.amap.com/images/autonavi.png \"/></div> ");
          info.push('<div class="info-title">当前停车点信息</div>');
          this.infowindow1.setContent(info.join("")+this.record.data.parkName+"<div style='margin-bottom: 5px'></div>"+this.record.data.address+"<div style='margin-bottom: 5px'></div>"+"泊位总数(个)："+this.record.data.sumTruckSpace +"<div style='margin-bottom: 5px'></div>"+"空余泊位(个)："+this.record.data.leisureTruckSpace);
-        console.log(this.record)
          this.infowindow1.open(this.map,[record.data.coordinateX,record.data.coordinateY])  //allBerth:14,
       },
       toShow(item){

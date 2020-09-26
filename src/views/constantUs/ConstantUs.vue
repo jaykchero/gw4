@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="h-b">
-      <!-- <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt=""> -->
       <img v-lazy="hb">
     </div>
     <div class="cs-all">
@@ -115,8 +114,7 @@
           var cN=elem.className
           if (this.isElemVisible(elem)) {
             elem.className=cN+" "+"animated slideInLeft"
-            console.log(elem.className)
-            //this.fadeInElements1.splice(i, 1) // 只让它运行一次
+
           }
         }
 
@@ -128,7 +126,7 @@
           var cN=elem.className
           if (this.isElemVisible(elem)) {
             elem.className=cN+" "+"animated slideInUp"
-            console.log(elem.className)
+
             this.fadeInElements.splice(i, 1) // 只让它运行一次
           }
         }
@@ -137,9 +135,9 @@
       isElemVisible (el) {
         var rect = el.getBoundingClientRect()
         var elemTop = rect.top
-        console.log("et"+elemTop)
+
         var elemBottom = rect.bottom
-        console.log("eb"+elemBottom)
+
         return elemTop < window.innerHeight && elemBottom >= 0
       }
     }

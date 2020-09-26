@@ -4,7 +4,7 @@
         <img v-lazy="hb">
       </div>
       <div >
-        <h1 style="color:white;font-size: 40px">莆田市停车分布</h1>
+        <h1 class="pt-header" style="color:white;font-size: 40px">莆田市停车分布</h1>
       </div>
 
       <div class="parkingDistribution">
@@ -24,111 +24,40 @@
     export default {
         name: "Putian",
 
-
       components:{
         ParkingDistribution,
       },
       data () {
           return {
+            header:{},
             hb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/20191008040012800.jpg',
           }
       },
       mounted() {
-
-        this.header = Array.from(document.getElementsByClassName('Choices_head'))
-        this.left = Array.from(document.getElementsByClassName('Choices_left'))
-        this.right = Array.from(document.getElementsByClassName('Choices_right'))
-        //  console.log("hah"+this.left)
-        // 监听鼠标滚动事件
-        document.addEventListener('scroll', this.handleScroll3)
-        document.addEventListener('scroll', this.handleScroll2)
-        document.addEventListener('scroll', this.handleScroll)
-
-
-        $('.Choicesnext').click(function () {
-          $(".Choices_banner ul").animate({marginLeft:"-1184px"},600, function () {
-            $(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
-            $(".Choices_banner ul").css('marginLeft','0px');
-          });
-          $(".Choicestel ul").css('marginLeft','-1184px');
-          $(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
-          $(".Choicestel ul").css({marginLeft:"0px"},600);
-        })
-
-        setInterval("this.Choices()","3000");
-        var tabChange = setInterval(Choices,3000);
-        //鼠标悬停暂停切换
-        $('.Choicesnext').mouseover(function(){
-          clearInterval(tabChange);
-        });
-        $('.Choicesnext').mouseout(function(){
-          tabChange = setInterval(Choices,3000);
-        });
+        this.header = Array.from(document.getElementsByClassName('pt-header'));
+        document.addEventListener("scroll",this.handleScroll1);
 
       },
-      methods:{
 
-        handleScroll (evt) {
+      methods:{
+        handleScroll1(evt){
           for (var i = 0; i < this.header.length; i++) {
             var elem = this.header[i]
-            //console.log(elem.className)
             var cN=elem.className
             if (this.isElemVisible(elem)) {
-              elem.className=cN+" "+"animated fadeInDown"
-              // console.log(elem.className)
-              this.header.splice(i, 1) // 只让它运行一次
+              elem.className=cN+" "+"animated zoomIn"
             }
           }
         },
-
-
-        handleScroll3 (evt) {
-          for (var i = 0; i < this.right.length; i++) {
-            var elem = this.right[i]
-            //console.log(elem.className)
-            var cN=elem.className
-            if (this.isElemVisible(elem)) {
-              elem.className=cN+" "+"animated fadeInRight"
-              // console.log(elem.className)
-              this.right.splice(i, 1) // 只让它运行一次
-            }
-          }
-        },
-
-
-        handleScroll2 (evt) {
-          for (var i = 0; i < this.left.length; i++) {
-            var elem = this.left[i]
-            //console.log(elem.className)
-            var cN=elem.className
-            if (this.isElemVisible(elem)) {
-
-              elem.className=cN+" "+"animated slideInLeft"
-              //console.log(elem.className)
-              this.left.splice(i, 1) // 只让它运行一次
-            }
-          }
-        },
-
-        // 判断元素距离窗口的位置
         isElemVisible (el) {
           var rect = el.getBoundingClientRect()
-          var elemTop = rect.top  // 200 = buffer
+          var elemTop = rect.top
           var elemBottom = rect.bottom
+
           return elemTop < window.innerHeight && elemBottom >= 0
-        },
-
-
-        // Choices(){
-        //   $(".Choices_banner ul").animate({marginLeft:"-1184px"},600, function () {
-        //     $(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
-        //     $(".Choices_banner ul").css('marginLeft','0px');
-        //   });
-        //   $(".Choicestel ul").css('marginLeft','-1184px');
-        //   $(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
-        //   $(".Choicestel ul").css({marginLeft:"0px"},600);
-        // },
+        }
       }
+
     }
 
 

@@ -56,7 +56,7 @@
             this.screenHeight = document.body.clientHeight;
           })();
         };
-        console.log(this.screenHeight,this.screenWidth)
+
         if(this.screenWidth>1600||this.screenHeight>900){
           $('.clearfix').css("width","1600px");
            $('.clearfix li').css("margin-left","120px");
@@ -81,7 +81,6 @@
             var cN=elem.className
             if (this.isElemVisible(elem)) {
               elem.className=cN+" "+"animated slideInUp"
-              console.log(elem.className)
               this.fadeInElements.splice(i, 1) // 只让它运行一次
             }
           }
@@ -93,8 +92,7 @@
             var cN=elem.className
             if (this.isElemVisible(elem)) {
               elem.className=cN+" "+"animated fadeInRight"
-              console.log(elem.className)
-              //this.fadeInElements1.splice(i, 1) // 只让它运行一次
+
             }
           }
         },
@@ -103,9 +101,9 @@
         isElemVisible (el) {
           var rect = el.getBoundingClientRect()
           var elemTop = rect.top
-          console.log("et"+elemTop)
+
           var elemBottom = rect.bottom
-          console.log("eb"+elemBottom)
+
           return elemTop < window.innerHeight && elemBottom >= 0
         }
       },

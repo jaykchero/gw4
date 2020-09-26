@@ -76,7 +76,7 @@
           this.screenHeight = document.body.clientHeight;
         })();
       };
-      console.log(this.screenHeight)
+
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.b-center,.bottom-b').css("width","1600px");
         $('.c-center').css({"position":"absolute","left":"750px"});
@@ -95,12 +95,11 @@
       handleScroll4 (evt) {
         for (var i = 0; i < this.left.length; i++) {
           var elem = this.left[i]
-          //console.log(elem.className)
+
           var cN=elem.className
           if (this.isElemVisible(elem)) {
 
             elem.className=cN+" "+"animated fadeInUp"
-            // console.log(elem.className)
             this.left.splice(i, 1) // 只让它运行一次
           }
         }

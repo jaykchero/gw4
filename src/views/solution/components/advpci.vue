@@ -1,8 +1,6 @@
 <template>
 <div class="ap-all">
 
-
-
   <div class="adv" :class="{toleft:isToLeft}">
     <div class="left2" >
       <h2 class="h2 tl1">{{title1}}</h2>
@@ -47,9 +45,7 @@
           mounted () {
               // 先获取全部需要过渡效果的元素
               this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
-
                 this.right = Array.from(document.getElementsByClassName('right'))
-               //  console.log("hah"+this.left)
               // 监听鼠标滚动事件
               document.addEventListener('scroll', this.handleScroll)
 
@@ -60,20 +56,13 @@
               handleScroll3 (evt) {
                 for (var i = 0; i < this.right.length; i++) {
                   var elem = this.right[i]
-                  //console.log(elem.className)
                   var cN=elem.className
                   if (this.isElemVisible(elem)) {
                     elem.className=cN+" "+"animated fadeInRight"
-                     console.log(elem.className)
                     this.right.splice(i, 1) // 只让它运行一次
                   }
                 }
               },
-
-
-
-
-
 
                 // 循环判断是否要触发过渡
                 handleScroll (evt) {
@@ -82,7 +71,6 @@
                       var cN=elem.className
                     if (this.isElemVisible(elem)) {
                      elem.className=cN+" "+"animated slideInUp"
-                      console.log(elem.className)
                      this.fadeInElements.splice(i, 1) // 只让它运行一次
                     }
                   }
@@ -160,15 +148,9 @@
           position: relative;
     }
 
-
 img{
       width: 520px;
       height: 450px;
 
     }
-
-
-
-
-
 </style>

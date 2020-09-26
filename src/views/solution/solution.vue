@@ -25,7 +25,6 @@
      </a-divider>
   </div>
 
-  <!-- <router-view></router-view> -->
   <div class="solution1">
     <Comparisonschemes  id="Comparisonschemes"  style="padding-top: 100px;"></Comparisonschemes>
   </div>
@@ -91,12 +90,11 @@
              this.screenHeight = document.body.clientHeight;
            })();
          };
-          console.log(this.screenHeight,this.screenWidth)
+
+
          if(this.screenWidth>1600||this.screenHeight>900){
            $('.solution-all-item,.divider').css("width","1600px");
            $('.solution').css("width","1600px");
-
-
          }
 
 
@@ -105,8 +103,6 @@
          document.addEventListener('scroll', this.handleScroll)
 
           let maodian=this.GetQueryString('maodian');//进入页面，如果带有锚点参数，则跳转至锚点地方，参数值就是id名
-            console.log("000"+maodian)
-          console.info("*****",maodian)
 
           if(maodian){
 
@@ -126,7 +122,6 @@
                        var cN=elem.className
                      if (this.isElemVisible(elem)) {
                       elem.className=cN+" "+"animated slideInUp"
-                       console.log(elem.className)
                       this.divider.splice(i, 1) // 只让它运行一次
                      }
                    }

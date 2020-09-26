@@ -208,7 +208,7 @@ body{
 	text-justify: newspaper;
 	word-break: break-all;
 	padding-left: 50px;
-	color: #fff;
+	color: #696969;
 	padding-right: 10px;
 }
 

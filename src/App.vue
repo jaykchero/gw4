@@ -1,15 +1,9 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-
     <Header class="header"></header>
     <div class="lines"></div>
     <backtop></backtop>
 
-   <!-- <transition enter-active-class="animated fadeInUp"> -->
        <transition >
       <router-view/>
     </transition>
@@ -39,8 +33,7 @@
 <style lang="less">
   .header{
 
-    height: 76px;
-
+    height: 68px;
   }
   .lines{
     height: 1.5px;

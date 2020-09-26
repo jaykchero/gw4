@@ -34,8 +34,7 @@
 
       </div>
       <div class="swiper-pagination"></div>
-     <!-- <div class="swiper-button-prev "></div>
-      <div class="swiper-button-next "></div> -->
+
     </div>
 
 </div>
@@ -44,7 +43,7 @@
 
 <script>
   import Swiper from "swiper"
-   //import * as swiperAni from '../../../assets/js/animate.js' //根据自己的路径进行引入
+
   import $ from 'jquery'
 
 
@@ -73,10 +72,9 @@
           this.screenHeight = document.body.clientHeight;
         })();
       };
-        console.log(this.screenHeight)
+
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.swiper-pagination').css("top","950px");
-        console.log("css",$('.swiper-pagination').css("top"))
 
       }
 
@@ -109,20 +107,6 @@
       			nextEl: '.swiper-button-next',
       			prevEl: '.swiper-button-prev',
       		  },
-
-            // on:{
-            //   init: function(){
-            //    swiperAni.swiperAnimateCache(this); //隐藏动画元素
-            //    swiperAni.swiperAnimate(this); //初始化完成开始动画
-            //      },
-            //      slideChangeTransitionStart: function(){
-            //      swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
-            //      this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); // 动画只展现一次，去除ani类名
-            //         }
-            //     },
-
-
-
       		});
 
       $('.banner-swiper').hover(function(){
@@ -162,7 +146,6 @@
 
 <style scoped="scoped">
 @import url('../../../assets/css/swiper.min.css');
-
 
 .page {
   text-align: center;
@@ -276,15 +259,6 @@ body {
   		background-size:86px 112px;
   		margin-top:-56px;
   		outline:none;}
-	/* .swiper-button-next{
-		background-image:url(../../../assets/img/cursor-next.png);}
-	.swiper-button-prev{
-		background-image:url(../../../assets/img/cursor-prev.png);} */
-
-
-
-
-
 
 
 </style>

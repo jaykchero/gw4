@@ -95,7 +95,6 @@
           this.screenHeight = document.body.clientHeight;
         })();
       };
-     // console.log(this.screenHeight,this.screenWidth)
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.ps-center img').css({"width":"1200px","height":"900px","margin-top":"0px"});
         $('.ps-center').css({"width":"1240px","height":"940px","margin-top":"200px"})
@@ -112,8 +111,6 @@
            var cN=elem.className
          if (this.isElemVisible(elem)) {
           elem.className=cN+" "+"animated slideInUp"
-           console.log(elem.className)
-          //this.fadeInElements1.splice(i, 1) // 只让它运行一次
          }
        }
 
@@ -130,7 +127,6 @@
                  var cN=elem.className
                if (this.isElemVisible(elem)) {
                 elem.className=cN+" "+"animated zoomIn"
-                 console.log(elem.className)
                 this.fadeInElements.splice(i, 1) // 只让它运行一次
                }
              }
@@ -139,9 +135,9 @@
          isElemVisible (el) {
            var rect = el.getBoundingClientRect()
            var elemTop = rect.top
-           console.log("et"+elemTop)
+
            var elemBottom = rect.bottom
-            console.log("eb"+elemBottom)
+
            return elemTop < window.innerHeight && elemBottom >= 0
          }
        },

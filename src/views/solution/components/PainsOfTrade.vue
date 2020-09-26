@@ -3,11 +3,9 @@
      <div class="all">
       <div class="potheader">
      <h2 class="animated slideInUp h2">行业痛点</h2>
-    <!--  <p class="pp animated slideInUp">Pains of Industry</p> -->
+
     <span class="pp animated slideInUp">Pains of Industry</span>
-    <!-- <div class="liness slideInUp"></div> -->
       </div>
-       <!-- Swiper -->
          <div class="swiper-container">
            <div class="swiper-wrapper">
              <div class="swiper-slide init ">
@@ -18,7 +16,6 @@
              <div class="swiper-slide"><img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/cheliangluanting.png" alt=""><p class="desc init">车辆乱停</p></div>
              <div class="swiper-slide"><img class="img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E8%A1%8C%E4%B8%9A%E7%97%9B%E7%82%B9/dianchezhanwei.png" alt=""><p class="desc init">电动车占用车位</p></div>
            </div>
-         <!-- <div class="swiper-pagination"></div> -->
          </div>
        </div>
 
@@ -38,14 +35,13 @@
           this.screenHeight = document.body.clientHeight;
         })();
       };
-      console.log(this.screenHeight,this.screenWidth)
+
+
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.pp,.divider').css("margin-left","50px");
         $('.swiper-container').css({"width":"1200px","overflow":"hidden"})
         $('.swiper-slide').css({"width":"700px","height":"500px"})
       }
-
-
 
 
       var swiper = new Swiper('.swiper-container', {
@@ -125,8 +121,9 @@
 
     }
     body {
-     /* background: #eee; */
-    /* background:url("../../../assets/bg/hytd.jpg") no-repeat; */
+
+
+
      background-size: 100%;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;

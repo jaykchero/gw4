@@ -179,15 +179,7 @@
 
 img{
   width: 400px;
-  height: 597px;
-  /*font-family: 'Nunito', sans-serif;*/
-  /*background: linear-gradient(to left, #ffffff, #ffffff);*/
-  /*padding: 5px;*/
-
-
-  /*list-style: none;*/
-  /*border: 1px solid rgba(223,231,239, .7);*/
-
+  height: 497px;
     }
 
 

@@ -152,12 +152,9 @@ export default {
     handleScroll2 (evt) {
       for (var i = 0; i < this.left.length; i++) {
         var elem = this.left[i]
-        //console.log(elem.className)
         var cN=elem.className
         if (this.isElemVisible(elem)) {
-
           elem.className=cN+" "+"animated slideInDown"
-          // console.log(elem.className)
           this.left.splice(i, 1) // 只让它运行一次
         }
       }
@@ -167,12 +164,9 @@ export default {
     handleScroll (evt) {
       for (var i = 0; i < this.context.length; i++) {
         var elem = this.context[i]
-        //console.log(elem.className)
         var cN=elem.className
         if (this.isElemVisible(elem)) {
-
           elem.className=cN+" "+"animated slideInUp"
-          // console.log(elem.className)
           this.context.splice(i, 1) // 只让它运行一次
         }
       }

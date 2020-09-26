@@ -58,7 +58,6 @@
           this.screenHeight = document.body.clientHeight;
         })();
       };
-      console.log(this.screenHeight,this.screenWidth)
       if(this.screenWidth>1600||this.screenHeight>900){
         $('.p-content-item,.divider').css("width","1600px");
         $('.test1,.test,.test2').css("width","1600px");
@@ -66,13 +65,9 @@
       }
 
        let maodian=this.GetQueryString('maodian');//进入页面，如果带有锚点参数，则跳转至锚点地方，参数值就是id名
-         console.log("000"+maodian)
-       console.info("*****",maodian)
-
        if(maodian){
 
            this.goAnchor('#'+maodian);
-
        }
 
      },

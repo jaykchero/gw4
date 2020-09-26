@@ -40,10 +40,6 @@
 
 <style scoped>
 
-  .news-all{
-    /*margin-bottom: 400px;*/
-  }
-
   .news-context{
     font-size: 14px;
     color: #202830;

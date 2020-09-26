@@ -24,21 +24,15 @@
         >
         <a-menu-item-group >
            <a-menu-item key="setting:1">
-            <span>
               <a :href="'#/about?maodian=about1'">公司介绍</a>
-             <!-- <a href="/about/#about1">公司简介</a> -->
-            <!-- <router-link to="/about?maodian=about1">公司简介</router-link> --></span>
            </a-menu-item>
            <a-menu-item key="setting:2">
-            <span
-              >
                <a :href="'#/about?maodian=culture'">企业文化</a>
-              </span>
            </a-menu-item>
 
           <a-sub-menu>
              <span slot="title" @click="dhcli"
-             >  <a :href="'#/about?maodian=ProjectExperience'">项目经验</a></span
+             >  <a :href="'#/about?maodian=ProjectExperience'" style="color: #4e4e4e">项目经验</a></span
              >
             <a-menu-item-group >
             <a-menu-item key="1" @click="dhcli">
@@ -48,9 +42,9 @@
           </a-sub-menu>
 
           <a-menu-item key="setting:3">
-            <span>
+
               <a :href="'#/about?maodian=DevelopmentHistory'">发展历程</a>
-           </span>
+
           </a-menu-item>
 
          </a-menu-item-group>
@@ -61,26 +55,26 @@
           > <router-link to="/solution">解决方案</router-link></span>
         <a-menu-item-group >
            <a-menu-item key="setting:1">
-            <span>
+
                <a :href="'#/solution?maodian=PainsOfTrade'">行业痛点</a>
-              </span>
+
            </a-menu-item>
            <a-menu-item key="setting:2">
-            <span>
+
              <a :href="'#/solution?maodian=ProjectConstructionIdeas'">建设思考</a>
-           </span>
+
            </a-menu-item>
 
            <a-menu-item key="setting:3">
-           <span>
+
              <a :href="'#/solution?maodian=Comparisonschemes'">方案对比</a>
-           </span>
+
            </a-menu-item>
 
            <a-menu-item key="setting:4">
-           <span>
+
              <a :href="'#/solution?maodian=EquipmentDisplay'">设备展示</a>
-           </span>
+
            </a-menu-item>
          </a-menu-item-group>
       </a-sub-menu>
@@ -124,9 +118,6 @@
 
 <script>
 
-   // import $ from 'jquery'
-
-
   export default{
 
 
@@ -147,8 +138,6 @@
 
         mounted() {
 
-          //this.header = Array.from(document.getElementsByClassName('h-all'))
-
           // 监听鼠标滚动事件
           document.addEventListener('scroll', this.handleScroll)
           document.addEventListener('scroll', this.handleScroll1)
@@ -159,7 +148,6 @@
            document.addEventListener('scroll', this.handleScroll3)
              for (var i = 0; i < this.allDH.length; i++) {
                var elem = this.allDH[i]
-               //console.log(elem.className)
                var cN=elem.className
                if (this.isElemVisible(elem)) {
                  elem.className=cN+" "+"animated slideInDown"
@@ -194,7 +182,7 @@
 
                              else {
                                     this.isScroll=0;
-                               //console.log(this.isScroll)
+
                              }
                                },10);
 
@@ -213,11 +201,10 @@
              dhcli(){
                this.isReadyonly=0;
                clearTimeout(this.timer);  //清除延迟执行
-             // console.log('===='+this.isReadyonly)
                this.timer = setTimeout(()=>{   //设置延迟执行
                    this.isReadyonly=1;
                },100);
-             // console.log('===='+this.isReadyonly)
+
              }
 
 
@@ -232,8 +219,6 @@
 
 <style>
 
-
-
   .logo{
 
     display: inline-block;
@@ -241,26 +226,15 @@
     width: 120px;
     background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/logo2.1e9151c5.png) 0 30%/100% no-repeat scroll;
     height: 70px;
-
   }
-
-  .ant-menu-item a:hover{
-    color: #0080FF !important;
-  }
-
- .ant-menu-item-active{
-  color: #0080FF !important;
-}
 
 .header-menu{
   background-color: snow !important;
 }
 
-
-
 .header-fixd{
     width: 100%;
-    height: 65px;
+    height: 70px;
     position:fixed !important;
     top:0px;
     left: 0px;
@@ -268,12 +242,6 @@
     z-index: 10;
     margin-bottom: 150px;
   }
-/*
-  .header-xs{
-    opacity: 0;
-    transition: 0.5s all ease-out;
-    transform: scale(0.8);
-  } */
 
   .h-top{
   width: 1200px;
@@ -304,17 +272,19 @@
   }
 
   a{
-     color: #4e4e4e !important;
+     color: #4e4e4e ;
   }
 
   .ant-menu-submenu-open , .ant-menu-submenu-active,.ant-menu-submenu-selected{
      border-bottom: 0px !important;
-     background: #eee;
 
    }
 
+  .ant-menu-submenu:hover{
+    background: linear-gradient(to left, #a1a1a1, #979797);
+  }
+
  .submenu-title-wrapper a:hover{
-  /*border-bottom: 2px solid #477e9a;*/
    color: snow;
   }
 
@@ -329,11 +299,10 @@
   .submenu-title-wrapper .active{
     color: #477e9a!important;
     height: 50px;
-
+    font-size: 16px;
   }
-  .ant-menu-horizontal.active{
-      color: #1073d8
 
-  }
+
+
 
 </style>

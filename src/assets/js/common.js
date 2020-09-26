@@ -1,20 +1,13 @@
 import $ from 'jquery'
 
-
 function goAnchor(selector) {
 
-  console.info("selector1", selector)
-  console.log(selector)
   // var anchor = document.getElementById(selector); //获取元素
    var anchor =this.$el.querySelector(selector);//获取元素
-
-  console.log("aaa"+anchor.innerHTML)
-  //console.info("anchor", anchor)
 
   if (anchor) {
 
     setTimeout(() => { //页面没有渲染完成时是无法滚动的，因此设置延迟
-
       //anchor.scrollIntoView(); //js的内置方法，可滚动视图位置至元素位置
       var targetOffset = $(selector).offset().top-80;
 

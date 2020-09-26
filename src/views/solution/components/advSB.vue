@@ -43,9 +43,7 @@
 
                this.left = Array.from(document.getElementsByClassName('left'))
                 this.right = Array.from(document.getElementsByClassName('sbright'))
-               //  console.log("hah"+this.left)
               // 监听鼠标滚动事件
-
                document.addEventListener('scroll', this.handleScroll2)
                document.addEventListener('scroll', this.handleScroll3)
 
@@ -54,11 +52,9 @@
               handleScroll3 (evt) {
                 for (var i = 0; i < this.right.length; i++) {
                   var elem = this.right[i]
-                  //console.log(elem.className)
                   var cN=elem.className
                   if (this.isElemVisible(elem)) {
                     elem.className=cN+" "+"animated fadeInRight"
-                     console.log(elem.className)
                     this.right.splice(i, 1) // 只让它运行一次
                   }
                 }
@@ -68,12 +64,9 @@
                handleScroll2 (evt) {
                  for (var i = 0; i < this.left.length; i++) {
                    var elem = this.left[i]
-                   //console.log(elem.className)
                    var cN=elem.className
                    if (this.isElemVisible(elem)) {
-
                      elem.className=cN+" "+"animated fadeInLeft"
-                      console.log(elem.className)
                      this.left.splice(i, 1) // 只让它运行一次
                    }
                  }
