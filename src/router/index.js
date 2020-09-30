@@ -11,11 +11,7 @@ const routes = [
 
   },
 
-  {
-    path:'/emptry',
-    component: () => import( '../components/Emptry')
 
-  },
 
   {
     path:'/puxingSmartParking',
