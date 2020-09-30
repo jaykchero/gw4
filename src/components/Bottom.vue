@@ -1,53 +1,51 @@
 
 <template>
   <div class="b-all">
-  <div class="container">
-    <div class="row b-header">
-      <div class="col-md-4 col-sm-6">
-        <p class="b-title af">联系我们</p>
-        <p class="b-englist  af" style="line-height: 0px">Contact Us</p>
+    <div class="container">
+      <div class="row b-header">
+        <div class="col-md-4 col-sm-6">
+          <p class="b-title af">联系我们</p>
+          <p class="b-englist  af" style="line-height: 0px">Contact Us</p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div >
+            <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg" alt="">
+            <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xiaochengxu.png" alt="">
+          </div>
+        </div>
+
       </div>
-      <div class="col-md-4 col-sm-6">
-        <div >
-          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg" alt="">
-          <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xiaochengxu.png" alt="">
+
+      <div class="row b-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="b-left  af">
+            <a href="#" class="c-logo"><img style="width: 160px;height: 55px" src="../assets/logo.png" alt=""></a>
+            <br>
+            <span>普行智能停车（深圳）有限公司</span>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="b-content af">
+
+            <p>地址：广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>
+            <p>电话：0755-23286587</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="c-right af">
+            <p>邮编：518000</p>
+            <p>E-mail：puxing@pxznkj.com</p>
+          </div>
         </div>
       </div>
 
+      <div class="row b-bottom af">
+        <div class="col-sm">
+          <span class="center af">©2019-2020普行智能停车<a href="#" target="_blank" style="color:#696969;">粤ICP备19054564号-21</a></span>
+        </div>
+
+      </div>
     </div>
-
-    <div class="row b-center">
-      <div class="col-md-4 col-sm-6">
-        <div class="b-left  af">
-          <a href="#" class="c-logo"><img style="width: 160px;height: 55px" src="../assets/logo.png" alt=""></a>
-          <br>
-          <span>普行智能停车（深圳）有限公司</span>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="b-content af">
-
-          <p>地址：广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>
-          <p>电话：0755-23286587</p>
-          <p>手机：88888888888</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="c-right af">
-          <p>路线：88888888888</p>
-          <p>邮编：518000</p>
-          <p>E-mail：puxing@pxznkj.com</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row b-bottom af">
-      <div class="col-sm">
-        <span class="center af">©2017-2020普行智能停车<a href="#" target="_blank" style="color:#696969;"> 闽ICP备8888888888号</a></span>
-      </div>
-
-    </div>
-  </div>
   </div>
 </template>
 

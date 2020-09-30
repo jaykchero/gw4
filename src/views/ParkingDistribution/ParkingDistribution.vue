@@ -39,7 +39,6 @@
 
 <script>
   import Bottom from "../../components/Bottom";
-  import { lazyAMapApiLoaderInstance } from 'vue-amap'
   import greenStop from '../../assets/img/green.png'
   import redStop from '../../assets/img/red.png'
   import yellowStop from '../../assets/img/yello.png'
@@ -99,7 +98,7 @@
         // if(this.data!=null){
         //   clearInterval(this.timer);
         // }
-        lazyAMapApiLoaderInstance.load().then(() => {
+
           this.map = new AMap.Map('test-map', {
             zooms: [3, 18], // 地图缩放范围
             center: new AMap.LngLat(116.397428, 39.90923),
@@ -230,7 +229,7 @@
 
             // });
           })
-        })
+
       },
 
       queryAllData(){

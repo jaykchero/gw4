@@ -1,6 +1,6 @@
 <template>
     <div class="news-all">
-      <div class="container">
+      <div >
 
       <div class="page1">
         <h3 class="h3 tl1">最新资讯</h3>
@@ -8,7 +8,7 @@
       </div>
 
       <div>
-        <ul class="clearfix row">
+        <ul class="clearfix ">
           <li >
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news1.jpg"   alt="">
             <p class="news-context right">
@@ -40,7 +40,10 @@
 
 <style scoped>
 
-
+  .clearfix{
+    display: flex;
+    justify-content: space-around;
+  }
 
   .news-context{
     font-size: 14px;
