@@ -89,7 +89,7 @@
         margin-top: -110px !important;
         background-color: #FFFFFF;
         margin: 0 auto;
-        width: 1200px;
+        width: 80%;
     }
 
   #p-content {
@@ -112,18 +112,18 @@
   }
 
   .test{
-   height: 655px;
+   height: auto;
     overflow: hidden;
   }
   .test1{
-    height: 730px;
-     overflow: hidden;
+    height: auto;
+
   }
   .test2{
     padding-left: 50px;
      padding-right: 50px;
       padding-top: 100px;
-      height: 2000px;
+      height: auto;
 
      overflow: hidden;
   }

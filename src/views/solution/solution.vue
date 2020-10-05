@@ -82,6 +82,9 @@
       },
 
        mounted:function (){
+
+
+
         this.screenWidth = document.body.clientWidth;
          this.screenHeight = document.body.clientHeight;
          window.onresize = () => {
@@ -115,6 +118,10 @@
          methods:{
             goAnchor,
             GetQueryString,
+
+
+
+
             // 循环判断是否要触发过渡
                  handleScroll (evt) {
                    for (var i = 0; i < this.divider.length; i++) {
@@ -146,7 +153,7 @@
         margin-top: -110px !important;
         background-color: #FFFFFF;
         margin: 0 auto;
-        width: 1200px;
+        width: 80%;
     }
 
     .solution-all{
@@ -158,29 +165,24 @@
     }
 
 
-  .divider{
-    margin: 0 auto;
-    width: 1200px;
 
-  }
 
   .solution1{
 
-    height: 700px;
+    height: auto;
     overflow: hidden;
   }
 
   .solution{
     padding-bottom: 65px;
-    height: 650px;
+    height: auto;
     overflow: hidden;
   }
 
     .solution2{
       padding-top: 50px;
       margin-top: 100px;
-      height: 655px;
-      overflow: hidden;
+      height: auto;
     }
 
   .h-b img {

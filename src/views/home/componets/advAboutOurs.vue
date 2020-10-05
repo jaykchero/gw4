@@ -77,8 +77,8 @@
 
   .adv{
     display: flex;
-    width: 1200px;
-    height: 600px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     align-items: auto;
    justify-content: space-between;

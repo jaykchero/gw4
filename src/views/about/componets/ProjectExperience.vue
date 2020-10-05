@@ -118,6 +118,17 @@ export default {
 
 <style scoped lang="less">
 
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+  }
+
   .title{
     color: #ffffff;
   }

@@ -5,7 +5,6 @@
   <div class="adv"   >
     <div class="left">
 
-
       <h3 class="h3 left1">{{adv1.title2}}</h3>
      <!--  <h3 class="lh3">{{englist2}}</h3> -->
        <p class="p left1" >{{adv1.info2}}</p>

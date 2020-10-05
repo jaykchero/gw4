@@ -55,7 +55,7 @@
 
                 // 循环判断是否要触发过渡
                 handleScroll3 (evt) {
-                
+
                   for (var i = 0; i < this.left2 .length; i++) {
                     var elem = this.left2 [i]
                     var cN =elem.className
@@ -106,6 +106,7 @@
 <style scoped="scoped">
 
 
+
   .lii{
       transition: all .5s ease;
   }
@@ -124,7 +125,7 @@
 
   .adv{
     display: flex;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;

@@ -154,6 +154,18 @@
 </script>
 
 <style scoped="scoped">
+
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+  }
+
   .h2{
    text-align: left;
    color: #477e9a;

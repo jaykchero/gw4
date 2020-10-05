@@ -1,31 +1,61 @@
 <template>
-  <div class="home" v-loading="loading">
-    <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
-      <swiper-slide class="swiper-slide slide-one" >
+
+  <div>
+    <div v-if="flag==false">
+      <div class="mobile-1">
         <SwiperIndex ></SwiperIndex>
-      </swiper-slide>
-      <swiper-slide class="swiper-slide slide-two">
-      <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+      </div>
+
+      <div class="mobile-2">
         <div class="page1">
-          <p class="p">项目经验</p>
-          <p class="pp">鼠标选中查看详情</p>
+          <p >项目经验</p>
+          <p >鼠标选中查看详情</p>
         </div>
         <Protecteds></Protecteds>
       </div>
-      </swiper-slide>
-      <swiper-slide class="swiper-slide slide-three">
-       <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
-         <News style="height: 65%;margin-bottom: 50px"></News>
-         <Bottom style="height: 40%"></Bottom>
-     </div>
+      <div class="mobile-3">
+        <div class="page1">
+          <p>最新资讯</p>
+          <p>Latest News</p>
+        </div>
+        <News style="height: 65%;margin-bottom: 50px"></News>
+        <Bottom style="height: 40%"></Bottom>
+      </div>
+    </div>
 
 
-      </swiper-slide>
-    </swiper>
+    <div v-if="flag" class="home" v-loading="loading">
+      <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
+        <swiper-slide class="swiper-slide slide-one" >
+          <SwiperIndex ></SwiperIndex>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide slide-two">
+          <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            <div class="page1">
+              <p class="p">项目经验</p>
+              <p class="pp">鼠标选中查看详情</p>
+            </div>
+            <Protecteds></Protecteds>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide slide-three">
+          <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
 
+            <div class="page1">
+              <h3 class="p tl1">最新资讯</h3>
+              <p class="p tl1">Latest News</p>
+            </div>
+            <News style="height: 65%;margin-bottom: 50px"></News>
+            <Bottom style="height: 40%"></Bottom>
+          </div>
+        </swiper-slide>
+      </swiper>
 
-
+    </div>
   </div>
+
+
+
 </template>
 
 <script>
@@ -43,6 +73,7 @@ import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
 
   components: {
+
     Protecteds,
     SwiperIndex,
     swiper,
@@ -54,6 +85,8 @@ export default {
   },
   data() {
     return {
+      flag:true,
+      cWidth:document.body.clientWidth,
       loading: true,
       caseList: [],
       newsList: [],
@@ -90,6 +123,23 @@ export default {
     };
   },
 
+  mounted() {
+   // this.cWidth=document.body.clientWidth;
+    this.checkWidth()
+    window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+  },
+
+  methods:{
+    checkWidth(){
+      this.cWidth=document.body.clientWidth;
+      if(this.cWidth<821){
+        this.flag=false;
+      }else {
+        this.flag=true;
+      }
+    },
+  },
+
   computed: {
     swiper() {
       return this.$refs.mySwiper.swiper;
@@ -101,7 +151,12 @@ export default {
 
 <style lang="scss" scoped>
 
-
+  mobile-3, mobile-2 .p{
+    color: #696969;
+  }
+  mobile-3, mobile-2 .pp{
+    color: #696969;
+  }
 
   .slide-three {
     height: 1080px !important;

@@ -67,7 +67,7 @@
 </template>
 
 <script>
-  import about1 from './componets/aboutOurs.vue'
+  import about1 from './componets/aboutOurs'
   import culture from './componets/Culture.vue'
   import DevelopmentHistory from './componets/DevelopmentHistory.vue'
   import ProjectExperience from './componets/ProjectExperience.vue'
@@ -94,11 +94,13 @@
         show: true,
         screenWidth: '',
         screenHeight: '',
+
       }
     },
 
 
     mounted: function () {
+
       this.screenWidth = document.body.clientWidth;
       this.screenHeight = document.body.clientHeight;
       window.onresize = () => {
@@ -132,6 +134,7 @@
     methods: {
       goAnchor,
       GetQueryString,
+
 
       // 循环判断是否要触发过渡
       handleScroll(evt) {
@@ -170,13 +173,13 @@
 
     background-color: #FFFFFF;
     margin: 0 auto;
-    width: 1200px;
+    width: 80%;
 
   }
 
   .divider {
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
 
   }
 </style>
@@ -202,14 +205,6 @@
     background-color: #14679f;
     position: relative;
     text-align: center;
-  }
-
-  .about {
-    background-color: #FFFFFF;
-    margin: 0 auto;
-    width: 1200px;
-    height: 655px;
-    overflow: hidden;
   }
 
 

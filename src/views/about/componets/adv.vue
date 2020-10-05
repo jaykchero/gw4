@@ -20,7 +20,7 @@
           <p class="p left1">{{info5}}</p>
           </div>
     </div>
-    <div class="right " >
+    <div v-if="flag" class="right " >
       <img v-lazy="img" >
     </div>
 
@@ -38,12 +38,18 @@
             return {
               fadeInElements:[],
               left:[],
-              right:[]
+              right:[],
+              flag:true,
+              cWidth:document.body.clientWidth,
 
             }
 
           },
           mounted () {
+
+            this.checkWidth()
+            window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+
               // 先获取全部需要过渡效果的元素
               this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
                this.left = Array.from(document.getElementsByClassName('lf'))
@@ -56,6 +62,15 @@
 
             },
              methods: {
+               checkWidth(){
+                 this.cWidth=document.body.clientWidth;
+                 if(this.cWidth<821){
+                   this.flag=false;
+                 }else {
+                   this.flag=true;
+                 }
+               },
+
               handleScroll3 (evt) {
                 for (var i = 0; i < this.right.length; i++) {
                   var elem = this.right[i]
@@ -111,37 +126,37 @@
 
 <style scoped>
 
-  .right{
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    width: 50%;
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+
+    .lefta{
+      vertical-align: top;
+      width: 100% !important;
+    }
   }
 
   .adv{
-    position: relative;
+   display: flex;
+    justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
   }
-
-
-
-    .liness{
-          content: "";
-          display: block;
-          width: 120px;
-          height: 1px;
-          background: #2e2e2e;
-          position: absolute;
-          bottom: -40px;
-    }
-
 
     .lefta{
       vertical-align: top;
       width: 50%;
     }
 
+    .right{
+      width: 50%;
+    }
 
     .h2{
       text-align: left;
@@ -165,7 +180,6 @@
     letter-spacing: 0;
     font-size: 18px;
     }
-
 
     .lh3{
           color: #555;

@@ -1,12 +1,12 @@
 <template>
-  <div class="test">
+  <div class="aboutus">
    <!-- <div class="header">
       <div class="header-left">
       <h1>企业介绍</h1>
       <p>Business introduction</p>
       </div>
     </div> -->
-      <advAboutOurs  style=" width: 100% ;height: 600px; "
+      <advAboutOurs
       :title1="adv1.title1"
       :englist="adv1.englist"
       :info="adv1.info"
@@ -95,7 +95,7 @@
    position: relative;
 
   }
-  .test{
+  .aboutus{
     padding-left: 50px;
     padding-right: 50px;
   }

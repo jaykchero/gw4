@@ -1,36 +1,44 @@
 <template>
-    <div class="news-all">
+    <div class="container">
       <div >
 
-      <div class="page1">
-        <h3 class="h3 tl1">最新资讯</h3>
-        <p class="p tl1">Latest News</p>
-      </div>
 
-      <div>
-        <ul class="clearfix ">
-          <li >
+      <div class="clearfix">
+        <div class="li ">
+
+          <div class="l-box">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news1.jpg"   alt="">
             <p class="news-context right">
               5月1日起，莆田在中心城区全面推广第四代智能化停车管理，通过统一的智能停车收费管理，杜绝了部分人因吃惯“免费的午餐”而将公共停车资源据为己有的陋习，盘活现有的停车资源，提高车位的使用率，道路通行和停车秩序得到明显改善。
             </p>
+          </div>
 
-          </li>
-          <li >
+
+
+        </div>
+        <div class="li ">
+          <div class="l-box2">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news4.jpg"  alt="">
-           <p class="news-context right">
-             停车位智能收费管理近3个月以来，莆田市停车秩序大有改观，道路车辆违停率明显降低，城区公共停车场的泊位使用率由原来的不足10%提升到现在的80%，城区道路通行能力逐步提高。
-           </p>
-          </li>
-          <li >
+            <p class="news-context right">
+              停车位智能收费管理近3个月以来，莆田市停车秩序大有改观，道路车辆违停率明显降低，城区公共停车场的泊位使用率由原来的不足10%提升到现在的80%，城区道路通行能力逐步提高。
+            </p>
+          </div>
+
+
+        </div>
+
+        <div class="li ">
+
+          <div class="l-box3">
             <img class="tl1" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/news/news6.jpg" alt="">
             <p class="news-context right">
-              为了保证高考期间，考点附近道路畅通，考生顺利出行，7月7日至8日，市国投易泊公司在市区莆田一中、莆田二中、莆田三中、莆田四中、哲理中学5个考场附近设立468个爱心助考道路停车泊位，为送考车辆提供免费停车服务，为考生们保驾护航。            </p>
-          </li>
+              为了保证高考期间，考点附近道路畅通，考生顺利出行，7月7日至8日，市国投易泊公司在市区莆田一中、莆田二中、莆田三中、莆田四中、哲理中学5个考场附近设立468个爱心助考道路停车泊位，为送考车辆提供免费停车服务，为考生们保驾护航。
+            </p>
+          </div>
 
-        </ul>
+        </div>
       </div>
-      </div>
+    </div>
     </div>
 </template>
 
@@ -40,10 +48,49 @@
 
 <style scoped>
 
+
+
+  .li{
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+    background: -webkit-linear-gradient(right, #ffffff, #2475a6);
+    background: linear-gradient(to left, white, white);
+    padding: 20px;
+    border: 1px solid rgba(223,231,239, .7);
+    color: rgb(32,40,48);
+    text-shadow: 0 1px 1px rgb(255,255,255);
+    font-size: 14px;
+    transition: all .2s ease;
+  }
+
+
   .clearfix{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
+
+  .li img{
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+  @media only screen and (max-width:751px) {
+    .li{
+      width: 100%;
+    }
+
+
+    .clearfix{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
 
   .news-context{
     font-size: 14px;
@@ -52,36 +99,10 @@
   }
 
 
-  li img{
-    padding-right: 70px;
-    width: 380px;
-    height: 250px;
-  }
 
 
 
-  ul {
-    width: 1200px;
-    margin: 0 auto;
-  }
 
-  ul li {
-    margin-left: 30px;
-    font-family: 'Nunito', sans-serif;
-    background: -webkit-linear-gradient(right, #ffffff, #2475a6);
-    background: linear-gradient(to left, white, white);
-    float: left;
-    width: 350px;
-    padding: 20px;
-    list-style: none;
-    height: 480px;
-    border: 1px solid rgba(223,231,239, .7);
-    color: rgb(32,40,48);
-    text-shadow: 0 1px 1px rgb(255,255,255);
-    font-size: 14px;
-    transition: all .2s ease;
-
-  }
 
   ul li:hover{
     -webkit-transform: scale(1.1);
@@ -105,7 +126,6 @@
 
   ul li p {
     text-align: center;
-
   }
 
 

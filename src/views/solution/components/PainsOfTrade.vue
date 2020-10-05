@@ -4,7 +4,7 @@
       <div class="potheader">
      <h2 class="animated slideInUp h2">行业痛点</h2>
 
-    <span class="pp animated slideInUp">Pains of Industry</span>
+    <span class="lh3 animated slideInUp">Pains of Industry</span>
       </div>
          <div class="swiper-container">
            <div class="swiper-wrapper">
@@ -71,6 +71,50 @@
 </script>
 
 <style scoped="scoped">
+
+  @media only screen and (max-width:751px) {
+
+    .h2{
+      font-size: 20px !important;
+    }
+    .lh3{
+      font-size: 16px!important;
+     margin-bottom: -100px;
+    }
+
+
+    p{
+      letter-spacing: .009em;
+      color: #111;
+      font-size: 16px !important;
+      position: absolute;
+      top: 350px !important;
+      opacity: 1;
+      z-index: 999;
+    }
+    .img{
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to left, #19bcb8, #2475a6);
+      padding: 5px;
+      width: 300% !important;
+      height: auto;
+      list-style: none;
+      border: 1px solid rgba(223,231,239, .7);
+    }
+    img{
+      width: 300% !important;
+      height: auto;
+    }
+
+  }
+
+  .swiper-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
     .potheader{
 
       padding-left: 50px;
@@ -93,14 +137,12 @@
     font-size: 30px;
     font-weight: bolder;
    }
-   .pp{
-    position: absolute;
-    left: 210px;
+   .lh3{
+    display: block;
     color: #555;
     text-align: left;
      font-size: 23px;
     line-height: 36px;
-    font-family: "itcavantgardepro-bk";
 
    }
     p{
@@ -108,21 +150,12 @@
       color: #111;
       font-size: 20px;
       position: absolute;
-      top: 460px;
+      top: 450px;
       opacity: 1;
       z-index: 999;
        }
 
-
-    html, body {
-      position: relative;
-      height: 600px !important;
-      width: 1200px;
-
-    }
     body {
-
-
 
      background-size: 100%;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -136,22 +169,16 @@
       font-family: 'Nunito', sans-serif;
       background: linear-gradient(to left, #19bcb8, #2475a6);
       padding: 5px;
-      width: 570px;
-      height: 370px;
-
+      width: 150%;
+      height: auto;
       list-style: none;
       border: 1px solid rgba(223,231,239, .7);
     }
     img{
-      width: 550px;
-      height: 350px;
+      width: 150%;
+      height: auto;
     }
 
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-
-    }
     .swiper-slide {
       position: relative;
       width: 600px;
@@ -159,8 +186,6 @@
       text-align: center;
       font-size: 18px;
       background: #fff;
-
-      /* Center slide text vertically */
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;

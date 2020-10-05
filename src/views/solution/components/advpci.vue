@@ -18,7 +18,7 @@
          <p class="p tl1" style="margin-bottom: 30px">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
 
     </div>
-    <div class="right" >
+    <div  v-if="flag" class="right" >
         <img v-lazy="img" alt="">
     </div>
 
@@ -37,12 +37,18 @@
             return {
               fadeInElements:[],
               left1:[],
-              right:[]
+              right:[],
+              flag:true,
+              cWidth:document.body.clientWidth,
 
             }
 
           },
           mounted () {
+
+            this.checkWidth()
+            window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+
               // 先获取全部需要过渡效果的元素
               this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
                 this.right = Array.from(document.getElementsByClassName('right'))
@@ -53,6 +59,16 @@
 
             },
              methods: {
+
+               checkWidth(){
+                 this.cWidth=document.body.clientWidth;
+                 if(this.cWidth<821){
+                   this.flag=false;
+                 }else {
+                   this.flag=true;
+                 }
+               },
+
               handleScroll3 (evt) {
                 for (var i = 0; i < this.right.length; i++) {
                   var elem = this.right[i]
@@ -89,18 +105,34 @@
 
 <style scoped>
 
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+
+    .left2{
+      vertical-align: top;
+      width: 100% !important;
+    }
+  }
+
   .right{
     float: right;
     width: 50%;
   }
 
+  .adv{
+    display: flex;
+    justify-content: space-between;
+  }
     .ap-all{
       padding-left: 50px;
       padding-right: 50px;
-      height: 655px;
-      margin: 0 auto;
-      overflow: hidden;
-
     }
 
 

@@ -45,8 +45,6 @@
   import Swiper from "swiper"
 
   import $ from 'jquery'
-
-
   export default {
 
      components:{
@@ -208,6 +206,7 @@ p {
 
 
     img{
+      width: 100%;
       height: 700px !important;
     }
 

@@ -1,23 +1,22 @@
 <template>
 
-  <div class="test1">
-    <div class="test2">
-      <div class="adv " :class="{toleft:isToLeft}"  >
+  <div class="about-us">
+    <div class="about-us2">
+      <div class="about-centent" :class="{toleft:isToLeft}"  >
         <div class="left">
           <h2 class="h2 left1  animated slideInDown">{{title1}}</h2>
           <h3 class="lh3 animated slideInDown">{{englist}}</h3>
           <div class="animated slideInUp">
             <p class="pp left1" style="margin-bottom: 30px">{{info}}</p>
             <h3 class="h3 left1" >{{title2}}</h3>
-            <!--  <h3 class="lh3">{{englist2}}</h3> -->
             <p class="pp left1" style="margin-bottom: 30px">{{info2}}</p>
             <h3 class="h3 left1">{{title3}}</h3>
-            <!--  <h3 class="lh3">{{englist3}}</h3> -->
+
             <p class="pp left1">{{info3}}</p>
           </div>
         </div>
 
-        <div class="right animated slideInRight " >
+        <div v-if="flag" class="right animated slideInRight " >
           <img v-lazy="img" >
         </div>
 
@@ -35,11 +34,16 @@
       return {
         fadeInElements:[],
         left1:[],
-        right:[]
+        right:[],
+        flag:true,
+        cWidth:document.body.clientWidth,
       }
 
     },
     mounted () {
+      this.checkWidth()
+      window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+
       // 先获取全部需要过渡效果的元素
       this.left1 = Array.from(document.getElementsByClassName('left'))
       this.right = Array.from(document.getElementsByClassName('right'))
@@ -47,6 +51,14 @@
 
     methods: {
 
+      checkWidth(){
+        this.cWidth=document.body.clientWidth;
+        if(this.cWidth<821){
+          this.flag=false;
+        }else {
+          this.flag=true;
+        }
+      },
 
       // 判断元素距离窗口的位置
       isElemVisible (el) {
@@ -63,6 +75,23 @@
 </script>
 
 <style scoped="scoped">
+
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+
+    .left{
+      vertical-align: top;
+      width: 100% !important;
+    }
+  }
+
   .right{
     float: right;
     width: 50%;
@@ -72,16 +101,13 @@
     flex-direction: row-reverse;
   }
 
-  .adv{
+  .about-centent{
     position: relative;
     padding-top: 100px;
     display: flex;
-
-    height: 600px;
     margin: 0 auto;
     align-items: auto;
     justify-content: space-between;
-
   }
 
   .left{

@@ -199,7 +199,7 @@ export default {
   .ant-table-thead > tr > th {
         text-align: center !important;
         color: #F79646 !important;
-        font-size: 18px;
+        font-size: 16px;
         font-weight:0;
   }
   .ant-table-row > td:nth-child(2) {
@@ -217,11 +217,28 @@ td.column-money {
 </style>
 <style scoped="scoped">
 
+  @media only screen and (max-width:751px) {
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+
+
+
+  }
+
    body{
      text-align: center;
    }
 
-
+    .context{
+      display: flex;
+      justify-content: center;
+    }
 
 
    .header{

@@ -87,7 +87,16 @@
 
 <style scoped="scoped">
 
+  @media only screen and (max-width:751px) {
+    .h2{
 
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+  }
 
   .sbright{
     width: 100%;
@@ -100,8 +109,7 @@
     position: relative;
     padding-top: 100px;
     display: flex;
-    /*width: 1200px;*/
-    height: 600px;
+    height: auto;
     margin: 0 auto;
     align-items: auto;
     justify-content: space-between;

@@ -2,13 +2,14 @@
 <template>
   <div>
     <header class="cd-morph-dropdown">
+<!--      <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>-->
       <router-link to="/0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></router-link>
       <nav class="main-nav" v-bind:class="{'header-fixd animated fadeInDown ':isScroll=='1',' ':isScroll==0}">
 
        <i class="logo"></i>
 
         <ul>
-          <li >
+          <li>
             <router-link to="/home">首页</router-link>
           </li>
 
@@ -32,7 +33,7 @@
       <div class="morph-dropdown-wrapper">
         <div class="dropdown-list">
           <ul>
-            <li id="home" class="dropdown links">
+            <li id="home" class="dropdown links" @click="changNav">
               <router-link to="/home" class="label">首页</router-link>
             </li>
 
@@ -256,6 +257,12 @@
     },
 
     methods:{
+
+      changNav(){
+
+        //$(".nav-trigger").removeClass("nav-open");
+
+      },
 
       //实现导航吸顶
       handleScroll1 (evt) {

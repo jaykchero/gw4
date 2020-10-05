@@ -1,48 +1,51 @@
 
 <template>
   <div class="b-all">
-    <div class="container">
-      <div class="row b-header">
-        <div class="col-md-4 col-sm-6">
+    <div class="all-centent">
+      <div class="b-header">
+        <div class="header-contanct">
           <p class="b-title af">联系我们</p>
           <p class="b-englist  af" style="line-height: 0px">Contact Us</p>
         </div>
-        <div class="col-md-4 col-sm-6">
+
+        <div >
+          <div class="b-left af">
+            <a href="#" class="c-logo"><img style="width: 160px;height: 55px" src="../assets/logo.png" alt=""></a>
+            <br>
+            <span>普行智能停车（深圳）有限公司</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-center">
+        <div>
           <div >
             <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/gongzonghao.jpg" alt="">
             <img class="cc-img af" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xiaochengxu.png" alt="">
           </div>
         </div>
 
-      </div>
 
-      <div class="row b-center">
-        <div class="col-md-4 col-sm-6">
-          <div class="b-left  af">
-            <a href="#" class="c-logo"><img style="width: 160px;height: 55px" src="../assets/logo.png" alt=""></a>
-            <br>
-            <span>普行智能停车（深圳）有限公司</span>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
+        <div >
           <div class="b-content af">
 
             <p>地址：广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>
             <p>电话：0755-23286587</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-sm">
+          <span class="center af">©2019-2020普行智能停车  <a href="#" target="_blank" style="color:#696969;"> 粤ICP备19054564号-21</a></span>
+        </div>
+      </div>
+
+      <div class=" b-bottom af">
+        <div >
           <div class="c-right af">
             <p>邮编：518000</p>
             <p>E-mail：puxing@pxznkj.com</p>
           </div>
         </div>
-      </div>
 
-      <div class="row b-bottom af">
-        <div class="col-sm">
-          <span class="center af">©2019-2020普行智能停车<a href="#" target="_blank" style="color:#696969;">粤ICP备19054564号-21</a></span>
-        </div>
 
       </div>
     </div>
@@ -121,11 +124,23 @@
     text-align: center;
   }
 
-  .container{
-    width: 1200px !important;
-    margin: 0 auto;
+
+  @media only screen and (max-width:751px) {
+    .all-centent{
+     padding-left: 10px;
+      padding-right: 10px;
+    }
   }
+
+
+
+.all-centent{
+  display: flex;
+  justify-content: space-around;
+}
+
   .b-bottom{
+    margin-top: 60px;
     display: block;
     color: #ffffff;
   }
@@ -158,8 +173,7 @@
     color: #f3f3f3;
     width: 140px;
     height: 65px;
-    float: left;
-    margin-top: -30px;
+
   }
 
   .cc-img {
@@ -177,6 +191,7 @@
 
   }
   .center{
+    color: snow;
     line-height: 58px;
   }
 </style>
