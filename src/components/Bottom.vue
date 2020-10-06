@@ -127,9 +127,25 @@
 
   @media only screen and (max-width:751px) {
     .all-centent{
-     padding-left: 10px;
-      padding-right: 10px;
+     padding-left: 20px;
+      padding-right: 20px;
     }
+    .b-title{
+      font-size:18px !important;
+    }
+    .b-englist{
+      font-size:10px !important;
+    }
+    p,span {
+      font-size:12px !important;
+    }
+    .cc-img {
+      margin-left: 5px !important;
+      width: 60px!important;
+      height: 60px!important;
+
+    }
+
   }
 
 
@@ -192,6 +208,6 @@
   }
   .center{
     color: snow;
-    line-height: 58px;
+    line-height: 30px;
   }
 </style>

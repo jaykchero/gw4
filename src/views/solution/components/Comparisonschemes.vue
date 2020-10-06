@@ -102,7 +102,7 @@ export default {
   data() {
     const columns = [
       {
-        title: '项目',
+        title: '项目案例',
         dataIndex: 'project',
         customRender: renderContent,
       },
@@ -186,6 +186,20 @@ export default {
 </script>
 <style>
 
+  @media only screen and (max-width:751px) {
+    .ant-table-thead > tr > th {
+      text-align: center !important;
+      color: #ff7100 !important;
+      font-size: 10px !important;
+      font-weight:0;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 8px 8px !important;
+      overflow-wrap: break-word;
+      font-size: 9px;
+    }
+  }
   .liness{
 
       top: 10px;
@@ -198,7 +212,7 @@ export default {
 
   .ant-table-thead > tr > th {
         text-align: center !important;
-        color: #F79646 !important;
+        color: #ff7100 !important;
         font-size: 16px;
         font-weight:0;
   }
@@ -226,8 +240,6 @@ td.column-money {
     .lh3{
       font-size: 16px!important;
     }
-
-
 
   }
 

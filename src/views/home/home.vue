@@ -2,8 +2,8 @@
 
   <div>
     <div v-if="flag==false">
-      <div class="mobile-1">
-        <SwiperIndex ></SwiperIndex>
+      <div class="mobile-1" style="margin-bottom: 50px">
+        <SwiperIndexMoblie></SwiperIndexMoblie>
       </div>
 
       <div class="mobile-2">
@@ -65,6 +65,7 @@
   import Protecteds from '../about/componets/ProjectExperience'
   import News from "./componets/News";
   import Bottom from "../../components/Bottom";
+  import SwiperIndexMoblie from "./componets/SwiperIndexMoblie";
   import ParkingDistribution from '../ParkingDistribution/ParkingDistribution'
 
 
@@ -81,6 +82,7 @@ export default {
 
     News,
     Bottom,
+    SwiperIndexMoblie,
 
   },
   data() {

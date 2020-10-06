@@ -272,7 +272,7 @@ body {
         opacity: 1  !important;
 
       /*background: -webkit-linear-gradient(right, #2475a6, dodgerblue) !important;*/
-       background: linear-gradient(to left, #ffffff, #ffffff)  !important
+    background: linear-gradient(to left, #696969, #696969)  !important
      }
 
       .swiper-pagination-bullet-active {

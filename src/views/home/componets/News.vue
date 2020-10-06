@@ -80,13 +80,14 @@
 
   @media only screen and (max-width:751px) {
     .li{
-      width: 100%;
+      width: 90%;
     }
 
 
     .clearfix{
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
   }
