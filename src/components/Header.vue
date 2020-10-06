@@ -24,7 +24,7 @@
           <li class="has-dropdown button" data-content="pxparking">
             <router-link to="/puxingSmartParking">普行停车</router-link>
           </li>
-          <li >
+          <li class="has-dropdown button" data-content="constantUs">
             <router-link to="/constantUs">联系我们</router-link>
           </li>
         </ul>
@@ -82,6 +82,15 @@
                 </ul>
               </div>
             </li>
+
+            <li id="constantUs" class="dropdown links">
+              <router-link to="/constantUs" class="label">联系我们</router-link>
+              <div class="content">
+
+              </div>
+
+            </li>
+
           </ul>
           <div class="bg-layer" aria-hidden="true"></div>
         </div> <!-- dropdown-list -->
@@ -303,6 +312,10 @@
 
 <style scoped >
   @import url('../assets/css/nav.css');
+
+  /*dropdown{*/
+  /*  z-index: 999;*/
+  /*}*/
 
   .links-list a{
     color: #696969;

@@ -6,17 +6,24 @@
     <div class="cs-all">
 
       <div class="cus-header">
-        <h2 class="ch-01 tl1">
-          Hi, are you ready?
-        </h2>
-        <p class="ch-02 tl1">
-          准备好开始了吗？那就与我们取得联系吧
-        </p>
-        <p class="ch-03 tl1">
-          有项目想和我们谈谈吗？您可以通过以下的联系方式直接拨打电话与我们取得联系，或把您的需求发送我们的邮箱，我们会尽快与您联系，提供一个全面的解决方案！您也可以根据地址亲临参观了解。
-        </p>
+        <div class="ch-left">
+          <h2 class="ch-01 ch tl1">
+            Hi, are you ready?
+          </h2>
+          <p class="ch-02 ch tl1">
+            准备好开始了吗？那就与我们取得联系吧
+          </p>
+          <p class="ch-03 ch tl1">
+            有项目想和我们谈谈吗？您可以通过以下的联系方式直接拨打电话与我们取得联系，或把您的需求发送我们的邮箱，我们会尽快与您联系，提供一个全面的解决方案！您也可以根据地址亲临参观了解。
+          </p>
+        </div>
+        <div class="ch-rigth">
+
+        </div>
+
       </div>
 
+      <div class="cu-context">
       <div class="left">
         <div class="ch-context">
 
@@ -51,6 +58,8 @@
       </div>
       <div class="right tl2">
         <div id="allmap"></div>
+      </div>
+
       </div>
     </div>
     <div>
@@ -146,29 +155,71 @@
 </script>
 
 <style scoped>
+
+  @media only screen and (max-width: 1445px) {
+    .ch {
+      padding: 25px 0 0 !important;
+    }
+    .ch-01 ,.ch-02{
+      line-height: 35px !important;
+      font-size: 25px !important;
+    }
+    .ch-03{
+      line-height: 30px !important;
+      font-size: 16px !important;
+    }
+    .cu-context{
+      margin-bottom: 50px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left{
+      width: 100% !important;
+
+    }
+    .right{
+      width: 100% !important;
+
+    }
+    #allmap{
+      height: 200px !important;
+    }
+  }
+
   body{
     text-align: center;
   }
+
+
+
+  .cu-context{
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+  }
+
+
   .cs-all{
-    width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    height: 680px;
+    height: auto;
   }
 
   #allmap{
-    width: 840px;
-    height: 350px;
+    width: 100%;
+    height: 400px;
 
   }
 
   .left{
     margin-top: 10px;
-    float: left;
+
     width: 30%;
   }
   .right{
     width: 70%;
-    float: right;
 
   }
   .ch-context{

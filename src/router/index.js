@@ -11,7 +11,11 @@ const routes = [
 
   },
 
+  {
+    path:'/empty',
+    component: () => import( '../components/Emptry')
 
+  },
 
   {
     path:'/puxingSmartParking',

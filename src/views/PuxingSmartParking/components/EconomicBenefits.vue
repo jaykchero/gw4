@@ -6,12 +6,16 @@
       <h3 class="lh3 tl1">Economic Benefits</h3>
     </div>
     <div class="e-content">
+
       <div class="eb-left tl11">
-        <img class="eb " v-lazy="eb" alt="">
+        <div class="left-img">
+          <img class="eb " v-lazy="eb" alt="">
+        </div>
+
       </div>
       <div class="eb-right ">
-        <h2 class="h3 tl2" >以左图为例：</h2>
-          <p class="tl2">一天24小时此图为中午12：00左右</p>
+        <h2 class="h3 tl2" >{{h2}}</h2>
+        <p class="tl2">一天24小时此图为中午12：00左右</p>
         <p class="tl2">平均1个车已经收费接近20元</p>
         <p class="tl2">按照某三级市的收费标准：</p>
         <p class="tl2">一辆车一天收费封顶30元</p>
@@ -38,6 +42,7 @@
     name: "SocialEffect",
     data() {
       return {
+        h2:"以左图为例",
         fadeInElements1:[],
         fadeInElements:[],
         eb: 'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/Economic.png',
@@ -45,6 +50,10 @@
 
     },
     mounted() {
+
+
+      this.checkWidth();
+      window.addEventListener("resize", this.checkWidth); // 横竖屏问题
 
       this.screenWidth = document.body.clientWidth;
       this.screenHeight = document.body.clientHeight;
@@ -71,6 +80,15 @@
     },
     methods:{
       // 循环判断是否要触发过渡
+
+      checkWidth(){
+
+        if (document.body.clientWidth<900){
+          this.h2="以上图为例"
+        }else {
+          this.h2="以左图为例"
+        }
+      },
 
       handleScroll1(evt){
         for (var i = 0; i < this.fadeInElements1.length; i++) {
@@ -111,44 +129,76 @@
 
 <style scoped>
 
+
+
+  @media only screen and (max-width:900px) {
+
+    .e-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left-img{
+      padding: 5px !important;
+    }
+
+    .h2{
+
+      font-size: 20px!important;
+
+    }
+    .lh3{
+      font-size: 16px!important;
+    }
+
+    .eb-right {
+      width: 100% !important;
+    }
+  }
+
   .tl2{
     margin-bottom: 15px;
     font-size: 15px;
+    text-align: left;
+    margin-left: 20px;
   }
 
 
   .h3{
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20px;
     text-align: left;
     display: block;
     color: #F79646;
     letter-spacing: 0;
     font-size: 18px;
   }
-  .eb-left {
-    float: left;
+
+  .left-img {
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(to left, #2475a6, #2475a6);
+    background: linear-gradient(to left, #2475a6, #ffffff);
     padding: 10px;
-    width: 750px;
-    height: 520px;
+    width:100%;
+    height: auto;
     list-style: none;
     border: 1px solid rgba(223,231,239, .7);
     transition: all .2s ease;
   }
 
   .eb-right {
-    float: right;
+    width: 50%;
   }
 
   .e-content {
-    text-align: left;
+   display: flex;
+    justify-content: space-between;
   }
 
   .eb {
-    width: 730px;
-    height: 500px;
+    width:100%;
+    height: auto;
   }
 
   .i-all {

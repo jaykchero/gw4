@@ -2,7 +2,7 @@
 
 
 
-  <div class="adv"   >
+  <div class="adv">
     <div class="left">
 
       <h3 class="h3 left1">{{adv1.title2}}</h3>
@@ -17,14 +17,12 @@
       <p class="p left1">{{adv1.info6}}</p>
     </div>
 
-    <div class="right" >
-
+    <div class="right" v-if="flag" >
       <ul>
         <li>
           <img v-lazy="adv1.img" >
         </li>
       </ul>
-
     </div>
 
   </div>
@@ -40,6 +38,9 @@
 
           data(){
             return {
+              flag:true,
+              cWidth:document.body.clientWidth,
+
               fadeInElements:[],
               fadeInElements1:[],
 
@@ -69,6 +70,8 @@
           },
     mounted() {
 
+      this.checkWidth()
+      window.addEventListener("resize", this.checkWidth); // 横竖屏问题
 
       this.screenWidth = document.body.clientWidth;
       this.screenHeight = document.body.clientHeight;
@@ -98,6 +101,16 @@
 
     },
     methods:{
+
+      checkWidth(){
+        this.cWidth=document.body.clientWidth;
+        if(this.cWidth<821){
+          this.flag=false;
+        }else {
+          this.flag=true;
+        }
+      },
+
       // 循环判断是否要触发过渡
       handleScroll (evt) {
         for (var i = 0; i < this.fadeInElements.length; i++) {
@@ -138,16 +151,18 @@
 
 <style scoped="scoped">
 
+
+  @media only screen and (max-width:751px) {
+    .left{
+      vertical-align: top;
+      width: 100% !important;
+    }
+  }
   ul li {
-
       transition: all .5s ease;
-
-
     }
 
   ul li:hover{
-
-
 
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -159,23 +174,19 @@
 
   .adv{
     display: flex;
-    width: 1200px;
-
-    height: 600px !important;
-    margin: 0 auto;
-    align-items:  center ;
+    width: 100%;
+    height: auto;
    justify-content: space-between;
+    margin:  0 auto;
 
   }
 
   .left{
+
     vertical-align: top;
     width: 50%;
   }
-  .right{
-    width: 50%;
-    margin-right: 50px;
-  }
+
 
 
 
