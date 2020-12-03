@@ -62,7 +62,7 @@
 
                checkWidth(){
                  this.cWidth=document.body.clientWidth;
-                 if(this.cWidth<821){
+                 if(this.cWidth<1059){
                    this.flag=false;
                  }else {
                    this.flag=true;
@@ -105,7 +105,15 @@
 
 <style scoped>
 
-  @media only screen and (max-width:751px) {
+
+  @media only screen and (min-width:1600px) {
+    img{
+      width: 520px;
+      height: 450px;
+
+    }
+  }
+  @media only screen and (max-width:1059px) {
     .h2{
 
       font-size: 20px!important;
@@ -180,9 +188,9 @@
           position: relative;
     }
 
-img{
-      width: 520px;
-      height: 450px;
+  img{
+        width: 100%;
+        height: 450px;
 
-    }
+      }
 </style>

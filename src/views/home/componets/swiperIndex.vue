@@ -232,7 +232,7 @@ body {
 	        width:770px;
         }
 	}
-	@media only screen and (max-width:980px){
+	@media only screen and (max-width:821px){
 	    .swiper-slide {
 	        width:471px;
         }

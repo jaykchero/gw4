@@ -258,7 +258,7 @@
   .h-b{
     margin-bottom: 80px;
     width: 100%;
-    height: 388px;
+    height:auto;
     overflow: hidden;
   }
 

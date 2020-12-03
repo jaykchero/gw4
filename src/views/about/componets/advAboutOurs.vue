@@ -53,7 +53,7 @@
 
       checkWidth(){
         this.cWidth=document.body.clientWidth;
-        if(this.cWidth<821){
+        if(this.cWidth<1059){
           this.flag=false;
         }else {
           this.flag=true;
@@ -76,7 +76,7 @@
 
 <style scoped="scoped">
 
-  @media only screen and (max-width:751px) {
+  @media only screen and (max-width:1059px) {
     .h2{
 
       font-size: 20px!important;

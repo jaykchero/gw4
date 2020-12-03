@@ -6,7 +6,7 @@
 
 -------------------------------- */
 .cd-morph-dropdown {
-  position: relative;
+  position:relative ;
   height: 60px;
   background-color: #FFFFFF;
 }
@@ -179,6 +179,7 @@
   }
   .cd-morph-dropdown .nav-trigger {
     display: none;
+    background-color: #1da1bc;
   }
 
 

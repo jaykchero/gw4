@@ -6,7 +6,7 @@
 
     <span class="lh3 animated slideInUp">Pains of Industry</span>
       </div >
-        <div v-if="flag==false">
+        <div style="margin-top: 20px;" v-if="flag==false">
        <swiper  ref="mySwiper" :options="swiperOptions">
          <swiper-slide>
            <img  v-lazy="img1" >
@@ -140,7 +140,7 @@
 
 <style scoped="scoped">
 
-  @media only screen and (max-width:751px) {
+  @media only screen and (max-width:821px) {
     .haha{
       letter-spacing: .009em;
       color: #111;
@@ -294,7 +294,7 @@
 	  transform: scale(0.5);
     }
 	.swiper-slide-active,.swiper-slide-duplicate-active{
-      transform: scale(1);
+      transform: scale(1.1);
 
 	}
 

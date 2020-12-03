@@ -1,7 +1,7 @@
 <template>
   <div class="all-pdb">
     <div id="test-map" />
-    <div class="map-list">
+    <div v-if="flag" class="map-list">
       <h3 class="index-map-title">
         <img src="../../assets/img/data_image.png" alt="">
         莆田市区域泊位规划一览表
@@ -32,13 +32,13 @@
         </a-list>
       </div>
     </div>
-    <Bottom></Bottom>
+
 
   </div>
 </template>
 
 <script>
-  import Bottom from "../../components/Bottom";
+  // import Bottom from "../../components/Bottom";
   import greenStop from '../../assets/img/green.png'
   import redStop from '../../assets/img/red.png'
   import yellowStop from '../../assets/img/yello.png'
@@ -46,11 +46,12 @@
   import iconImg_on from '../../assets/img/data_image_on.png'
 
   export default {
-    components:{
-      Bottom
-    },
+
     data() {
       return {
+
+        flag:true,
+        cWidth:document.body.clientWidth,
 
         iconImg:iconImg_on,
         timer:'',
@@ -81,6 +82,9 @@
     },
 
     mounted() {
+      this.checkWidth()
+      window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+
       this.queryAllData();
 
       this.infowindow1 = new AMap.AdvancedInfoWindow({
@@ -94,15 +98,20 @@
     },
     methods:{
 
-      getMap(){
-        // if(this.data!=null){
-        //   clearInterval(this.timer);
-        // }
+      checkWidth(){
+        this.cWidth=document.body.clientWidth;
+        if(this.cWidth<821){
+          this.flag=false;
+          this.getMap();
+        }else {
+          this.flag=true;
+        }
+      },
 
+      getMap(){
           this.map = new AMap.Map('test-map', {
             zooms: [3, 18], // 地图缩放范围
-            center: new AMap.LngLat(116.397428, 39.90923),
-
+            center: new AMap.LngLat(119.007558, 25.431011),
           })
 
           // 加载海量点组件
@@ -255,7 +264,6 @@
          this.infowindow1.open(this.map,[record.data.coordinateX,record.data.coordinateY])  //allBerth:14,
       },
       toShow(item){
-
           this.record.data=item;
         this.map.setCenter([item.coordinateX,item.coordinateY])
         this.map.setZoom(20);
@@ -327,8 +335,8 @@
     position: absolute;
     top: 20px;
     left: 10px;
-    width: 272px;
-    height: 500px;
+    width: 20%;
+    height: auto;
     box-shadow: 0 0 10px #ccc;
     background-color: #fff;
     z-index: 100;

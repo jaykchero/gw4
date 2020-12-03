@@ -39,7 +39,7 @@
                 clickable: true,
 
               },
-              mousewheel: true,
+
               keyboard: true,
 
             }
@@ -49,7 +49,7 @@
 </script>
 
 <style scoped>
-  @media only screen and (max-width:751px) {
+  @media only screen and (max-width:821px) {
     .swiper-slide img {
       width: 100% !important;
       height:400px !important;

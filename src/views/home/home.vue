@@ -2,18 +2,23 @@
 
   <div>
     <div v-if="flag==false">
-      <div class="mobile-1" style="margin-bottom: 50px">
+      <div class="mobile-1" style="margin-bottom: 30px">
         <SwiperIndexMoblie></SwiperIndexMoblie>
       </div>
 
-      <div class="mobile-2">
-        <div class="page1">
-          <p >项目经验</p>
-          <p >鼠标选中查看详情</p>
+      <div class="mobile-2" style="padding: 20px">
+<!--        <div class="page1">-->
+<!--          <p >项目经验</p>-->
+<!--          <p >鼠标选中查看详情</p>-->
+<!--        </div>-->
+<!--        <Protecteds></Protecteds>-->
+        <div  class="page1">
+          <p style="color: #2e2e2e" class="p">莆田市道路停车分布图</p>
         </div>
-        <Protecteds></Protecteds>
+
+        <ParkingDistribution></ParkingDistribution>
       </div>
-      <div class="mobile-3">
+      <div class="mobile-3 " style="margin-top: 50px">
         <div class="page1">
           <p>最新资讯</p>
           <p>Latest News</p>
@@ -30,18 +35,22 @@
           <SwiperIndex ></SwiperIndex>
         </swiper-slide>
         <swiper-slide class="swiper-slide slide-two">
-          <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-            <div class="page1">
-              <p class="p">项目经验</p>
-              <p class="pp">鼠标选中查看详情</p>
-            </div>
-            <Protecteds></Protecteds>
+          <div @click="gotoAmap" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+<!--            <div class="page1">-->
+<!--              <p class="p">项目经验</p>-->
+<!--              <p class="pp">鼠标选中查看详情</p>-->
+<!--            </div>-->
+                        <div class="page1">
+                          <p class="p">莆田市道路停车分布图</p>
+                        </div>
+
+            <ParkingDistribution  style="z-index: 10000"></ParkingDistribution>
           </div>
         </swiper-slide>
         <swiper-slide class="swiper-slide slide-three">
           <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
 
-            <div class="page1">
+            <div class="page2">
               <h3 class="p tl1">最新资讯</h3>
               <p class="p tl1">Latest News</p>
             </div>
@@ -68,6 +77,8 @@
   import SwiperIndexMoblie from "./componets/SwiperIndexMoblie";
   import ParkingDistribution from '../ParkingDistribution/ParkingDistribution'
 
+  import axios from 'axios';
+
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 
@@ -75,7 +86,7 @@ export default {
 
   components: {
 
-    Protecteds,
+    // Protecteds,
     SwiperIndex,
     swiper,
     swiperSlide,
@@ -83,6 +94,7 @@ export default {
     News,
     Bottom,
     SwiperIndexMoblie,
+    ParkingDistribution,
 
   },
   data() {
@@ -126,12 +138,26 @@ export default {
   },
 
   mounted() {
+    this.getHC();
    // this.cWidth=document.body.clientWidth;
     this.checkWidth()
     window.addEventListener("resize", this.checkWidth); // 横竖屏问题
+
   },
 
   methods:{
+
+    getHC(){
+
+      axios.get("http://localhost:8081/homecarousel/list").then((res)=>{
+        console.log(res)
+      })
+
+    },
+
+    gotoAmap(){
+      this.$router.push({ path:'/putian'});
+    },
     checkWidth(){
       this.cWidth=document.body.clientWidth;
       if(this.cWidth<821){
@@ -153,8 +179,13 @@ export default {
 
 <style lang="scss" scoped>
 
+  .page2{
+    margin-bottom: 30px;
+  }
+
   mobile-3, mobile-2 .p{
-    color: #696969;
+    color: #5c5c5c;
+
   }
   mobile-3, mobile-2 .pp{
     color: #696969;

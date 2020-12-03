@@ -10,6 +10,7 @@
       <div class="parkingDistribution">
 
         <ParkingDistribution ></ParkingDistribution>
+        <Bottom></Bottom>
       </div>
 
 
@@ -20,7 +21,7 @@
   import $ from 'jquery'
 
   import ParkingDistribution from "../ParkingDistribution/ParkingDistribution"
-
+  import Bottom from "../../components/Bottom";
     export default {
         name: "Putian",
 
@@ -82,7 +83,7 @@
   .h-b{
     margin-bottom: -50px;
     width: 100%;
-    height: 388px;
+    height: auto;
     overflow: hidden;
   }
 

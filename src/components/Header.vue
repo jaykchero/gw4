@@ -1,12 +1,12 @@
 
 <template>
   <div>
-    <header class="cd-morph-dropdown">
-<!--      <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>-->
-      <router-link to="/0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></router-link>
+    <header class="cd-morph-dropdown " v-bind:class="{'header-fixd animated fadeInDown ':Imbibition=='1',' ':Imbibition==0}">
+      <i v-if="width" aria-hidden="true" class="logo"></i>
+      <a @click.prevent="changNav"  class="nav-trigger"> <span aria-hidden="true"></span></a>
       <nav class="main-nav" v-bind:class="{'header-fixd animated fadeInDown ':isScroll=='1',' ':isScroll==0}">
 
-       <i class="logo"></i>
+        <i class="logo"></i>
 
         <ul>
           <li>
@@ -24,11 +24,102 @@
           <li class="has-dropdown button" data-content="pxparking">
             <router-link to="/puxingSmartParking">普行停车</router-link>
           </li>
-          <li class="has-dropdown button" data-content="constantUs">
-            <router-link to="/constantUs">联系我们</router-link>
+          <li>
+            <router-link to="/parkingHeatmap">联系我们</router-link>
           </li>
         </ul>
       </nav>
+
+
+      <div  v-if="mobileNav" class="mobileNav animated slideInRight">
+
+        <ul>
+          <div class="lines"></div>
+          <li >
+            <span @click="changNav"><router-link  to="/home" class="m-label">首页</router-link></span>
+            <a @click="navZk"  class="nav-zk"> <a-icon type="plus" /></a>
+          </li>
+          <div class="lines"></div>
+          <li  class="dropdown links">
+            <span @click="changNav"><router-link  to="/about" class="m-label">关于我们</router-link></span>
+            <a @click="navZk(1)" class="nav-zk"><a-icon type="plus" /></a>
+            <div v-if="navZk1" class="m-content animated slideInDown">
+              <ul @click="navZk(1)" >
+                <li @click="changNav">
+                  <a :href="'#/about?maodian=about1'">公司介绍
+                  <img  src="../assets/img/nav_right.png" alt="">
+                  </a>
+
+                </li>
+                <li @click="changNav"> <a :href="'#/about?maodian=culture'">企业文化
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"> <a :href="'#/about?maodian=ProjectExperience'">项目经验
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"> <a :href="'#/about?maodian=DevelopmentHistory'">发展历程
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <div class="lines"></div>
+          <li  class="dropdown links">
+           <span @click="changNav"> <router-link to="/solution" class="m-label">解决方案</router-link></span>
+            <a @click="navZk(2)" class="nav-zk"><a-icon type="plus" /></a>
+
+            <div v-if="navZk2" class="m-content animated slideInDown">
+              <ul @click="navZk(2)" >
+                <li @click="changNav">
+                  <a :href="'#/solution?maodian=PainsOfTrade'">行业痛点
+                    <img  src="../assets/img/nav_right.png" alt="">
+                  </a>
+                </li>
+                <li @click="changNav"> <a :href="'#/solution?maodian=ProjectConstructionIdeas'">建设思考
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"><a :href="'#/solution?maodian=Comparisonschemes'">方案对比
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"> <a :href="'#/solution?maodian=EquipmentDisplay'">设备展示
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <div class="lines"></div>
+          <li  class="dropdown links">
+            <span @click="changNav"><router-link to="/puxingSmartParking" class="m-label">普行停车</router-link></span>
+            <a @click="navZk(3)" class="nav-zk"><a-icon type="plus" /></a>
+            <div v-if="navZk3" class="m-content animated slideInDown">
+              <ul @click="navZk(3)" >
+                <li @click="changNav">
+                  <a :href="'#/puxingSmartParking?maodian=t1'">停车系统
+                    <img  src="../assets/img/nav_right.png" alt="">
+                  </a>
+                </li>
+                <li @click="changNav"> <a :href="'#/puxingSmartParking?maodian=t2'">社会效益
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"><a :href="'#/puxingSmartParking?maodian=t3'">经济效益
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+                <li @click="changNav"> <a href="http://www.pxparking.com/test/#/login" target="_blank">员工登录
+                  <img  src="../assets/img/nav_right.png" alt="">
+                </a></li>
+              </ul>
+            </div>
+
+          </li>
+          <div class="lines"></div>
+          <li  class="dropdown links">
+            <span @click="changNav"> <router-link to="/constantUs" class="m-label">联系我们</router-link></span>
+            <a class="nav-zk"><a-icon type="plus" /></a>
+          </li>
+          <div class="lines"></div>
+        </ul>
+
+      </div>
 
       <div class="morph-dropdown-wrapper">
         <div class="dropdown-list">
@@ -36,7 +127,6 @@
             <li id="home" class="dropdown links" @click="changNav">
               <router-link to="/home" class="label">首页</router-link>
             </li>
-
 
             <li id="about" class="dropdown links">
               <router-link to="/about" class="label">关于我们</router-link>
@@ -78,7 +168,7 @@
                   <li>  <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a></li>
                   <li>   <a :href="'#/puxingSmartParking?maodian=t2'">社会效益</a></li>
                   <li> <a :href="'#/puxingSmartParking?maodian=t3'">经济效益</a></li>
-                  <li> <a href="http://www.ptyibo.com/#/login" target="_blank">员工登录</a></li>
+                  <li> <a href="http://www.pxparking.com/test/#/login" target="_blank">员工登录</a></li>
                 </ul>
               </div>
             </li>
@@ -95,7 +185,6 @@
           <div class="bg-layer" aria-hidden="true"></div>
         </div> <!-- dropdown-list -->
       </div> <!-- morph-dropdown-wrapper -->
-
     </header>
 
   </div>
@@ -111,14 +200,24 @@
         goUp:false,
         timer3:"",
         isScroll:0,
+        Imbibition:0,
         flag:false,
         cWidth:'',
+        mobileNav:false,
+        navZk1:false,
+        navZk2:false,
+        navZk3:false,
+        width:false,
       }
     },
 
     mounted() {
+      this.checkWidth();
+
+      window.addEventListener("resize", this.checkWidth); // 横竖屏问题
 
       document.addEventListener('scroll', this.handleScroll1)
+      document.addEventListener('scroll', this.handleScroll2)
 
       function morphDropdown( element ) {
         this.element = element;
@@ -168,15 +267,6 @@
           }
         });
 
-        //on small screens, open navigation clicking on the menu icon
-        this.element.on('click', '.nav-trigger', function(event){
-          this.goUp=!this.goUp;
-          if(this.goUp==false){
-            window.location.href="javascript:history.go(-1)";
-          }
-          event.preventDefault();
-          self.element.toggleClass('nav-open');
-        });
       };
 
       morphDropdown.prototype.showDropdown = function(item) {
@@ -267,9 +357,64 @@
 
     methods:{
 
+      checkWidth(){
+        if(document.body.clientWidth<821){
+          this.width=true;
+        }else {
+          this.width=false;
+        }
+      },
+
+      navZk(e){
+        if(e==1){
+          this.navZk1=!this.navZk1;
+          if(this.navZk1==true){
+            this.navZk2=false;
+            this.navZk3=false;
+          }
+        } else if (e==2){
+          this.navZk2=!this.navZk2;
+          if(this.navZk2==true){
+            this.navZk1=false;
+            this.navZk3=false;
+          }
+        } else if(e==3){
+          this.navZk3=!this.navZk3;
+          if(this.navZk3==true){
+            this.navZk1=false;
+            this.navZk2=false;
+          }
+        }
+      },
+
       changNav(){
 
-        //$(".nav-trigger").removeClass("nav-open");
+
+        this.mobileNav=!this.mobileNav;
+
+
+      },
+
+
+      handleScroll2(){
+        var swidth=document.body.clientWidth
+        var currentTop  = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+
+        if( swidth<821){
+          this.Imbibition=1;
+          // if( currentTop > 72){
+          //
+          //   $('.mobileNav').css('top',0+'px');
+          // }else {
+          //
+          //   $('.mobileNav').css('top',69+'px');
+          // }
+        }else {
+          this.Imbibition=0;
+        }
+
+
+
 
       },
 
@@ -279,24 +424,25 @@
         this.timer3 = setTimeout(()=>{
 
           var swidth=document.body.clientWidth
-         console.log(swidth)
-        if(swidth>750){
-          //设置延迟执行
-          var currentTop  = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-          if( currentTop > 72){
-            $('.cd-morph-dropdown .morph-dropdown-wrapper').css('top',currentTop+72+'px')
-            this.isScroll=1;
 
-          } else if (currentTop === 0) {
-            $('.cd-morph-dropdown .morph-dropdown-wrapper').css('top',72+'px')
-            this.isScroll=0;
+          if(swidth>750){
+            //设置延迟执行
+            var currentTop  = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            if( currentTop > 72){
+              $('.cd-morph-dropdown .morph-dropdown-wrapper').css('top',currentTop+72+'px')
+              $('.mobileNav').css('top',0+'px');
+              this.isScroll=1;
+
+            } else if (currentTop === 0) {
+              $('.cd-morph-dropdown .morph-dropdown-wrapper').css('top',72+'px')
+              this.isScroll=0;
+            }
+
+            else {
+              this.isScroll=0;
+
+            }
           }
-
-          else {
-            this.isScroll=0;
-
-          }
-        }
 
         },10);
 
@@ -310,12 +456,83 @@
 
 </script>
 
+
 <style scoped >
   @import url('../assets/css/nav.css');
 
-  /*dropdown{*/
-  /*  z-index: 999;*/
-  /*}*/
+  @media only screen and (max-width:751px) {
+
+  }
+
+  .router-link-exact-active{
+    color: #10a6a2 !important;
+  }
+
+  .m-content {
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
+    background: #ffffff;
+  }
+
+  .m-content ul li{
+    width: 100%;
+    height: 40px;
+  }
+  .m-content ul li a{
+    width: 100%;
+    display: inline-block;
+      color: #5c5c5c;
+    }
+  .m-content ul li a:hover{
+    color: #478aa8;
+  }
+
+  .m-content ul li img {
+    /*display: inline-block;*/
+    width: 20px;
+    height: 20px;
+    /*padding-top: 3px;*/
+  }
+
+  .m-label{
+    display: inline-block;
+    width: 80%;
+    height: 45px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 45px;
+  }
+  .nav-zk{
+
+    color:  #fff;
+    width: 20%;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+
+  }
+  .nav-zk:hover{
+    color: #f5b424;
+  }
+
+  .lines{
+    height: 1px;
+    width: 100%;
+    background-color: #f5b424;
+  }
+
+  .mobileNav{
+    width: 100%;
+    height: auto;
+    position:fixed !important;
+    left:0px;
+    top:69px;
+    background: #477e9a;
+    z-index: 10;
+  }
 
   .links-list a{
     color: #696969;
@@ -325,9 +542,11 @@
     color: #10a6a2;
   }
 
-  .router-link-exact-active{
-    color: #477e9a!important
-  }
+  /*.router-link-exact-active{*/
+  /*  color: #477e9a !important;*/
+  /*}*/
+
+
 
   .label{
     width: 40%;
@@ -335,7 +554,7 @@
     font-size: 30px;
   }
 
-   .label:hover {
+  .label:hover {
 
     color: #eeeeee;
     background: #10a6a2;
@@ -343,9 +562,9 @@
 
 
   .main-nav ul :hover{
-  background: #696969;
-  color: snow!important;
-}
+    background: #696969;
+    color: snow!important;
+  }
 
 
   .header-fixd{

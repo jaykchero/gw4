@@ -118,7 +118,19 @@ export default {
 
 <style scoped lang="less">
 
-  @media only screen and (max-width:751px) {
+  @media only screen and (max-width:980px) {
+    .box .title{
+      font-size: 18px !important;
+
+    }
+    .box .post{
+      font-size: 12px !important;
+
+    }
+  }
+
+
+  @media only screen and (max-width:821px) {
     .h2{
 
       font-size: 20px!important;
@@ -127,6 +139,16 @@ export default {
     .lh3{
       font-size: 16px!important;
     }
+
+    .box .title{
+      font-size: 14px !important;
+
+    }
+    .box .post{
+      font-size: 10px !important;
+
+    }
+
   }
 
   .title{

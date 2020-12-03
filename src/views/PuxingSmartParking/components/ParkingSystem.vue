@@ -170,7 +170,7 @@
 
 <style scoped="scoped">
 
-  @media only screen and (max-width:751px) {
+  @media only screen and (max-width:821px) {
     .lh33{
       font-size: 16px !important;
     }

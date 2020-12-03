@@ -68,6 +68,12 @@ const routes = [
     component: () => import( '../views/ParkingDistribution/ParkingDistribution')
   },
 
+  {
+    path:'/parkingHeatmap',
+    name: 'ParkingHeatmap',
+    component: () => import( '../views/home/componets/Heatmap')
+  },
+
 
 
 
